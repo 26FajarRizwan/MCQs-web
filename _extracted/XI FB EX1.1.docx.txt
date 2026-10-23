@@ -1,0 +1,21 @@
+Q1. Choose the correct option. exercise1.1 (20X1=20)
+1. √(−1) is the ________ notation for the imaginary unit number. (A) Lagrange’s (B) Euler’s (C) Leibniz’s (D) Cauchy’s
+2. A complex number is an expression of the form x+yi where x,y∈: (A) C (B) R (C) N (D) Q
+3. If z=3+4i, then Im(z) is: (A) i (B) 3 (C) 4 (D) −4i
+4. i+i^{2}+i^{3}+i^{4}+...+i^{20}= (A) i (B) -1 (C) 0 (D) 1
+5. √((−1)^{2})= (A) i (B) −i (C) 1 (D) -1
+6. Set of real numbers is a subset of: (A) Rational Numbers (B) Complex Numbers (C) Irrational Numbers (D) Integers
+7. Set of complex numbers is denoted by: (A) R (B) C (C) N (D) P
+8. Part of complex number which is along y-axis is called: (A) Real part (B) Imaginary part (C) Complex part (D) Both a and c
+9. If real part of complex number is zero then it is called: (A) Unreal (B) Pure complex (C) Pure Imaginary (D) None of these
+10. If z_{1}=2+i and z_{2}=4−3i then z_{1}z_{2}=? (A) (11, 2) (B) (11, -2) (C) (-11, -2) (D) (-11, 2)
+11. If z_{1}=3+7i and z_{2}=4+6i then (z_{1})/(z_{2})= (A) ((15)/(52),(23)/(52)) (B) ((15)/(52),−(23)/(52)) (C) (−(15)/(26),(23)/(26)) (D) ((23)/(26),−(15)/(26))
+12. If (2+3i)x+(1+3i)y+2=0, then value of x and y: (A) x=2,y=−2 (B) x=−2,y=2 (C) x=3,y=2 (D) x=−3,y=−2
+13. Conjugate of a complex number is its mirror image about: (A) x-axis (B) y-axis (C) origin (D) Both B and C
+14. Conjugate of z=(1+i)(2−i) is: (A) 3+2i (B) 3−i (C) 4+2i (D) 3+i
+15. Modulus of complex number is the distance of point (x, y) from: (A) x-axis (B) y-axis (C) Origin (D) Both A and B
+16. If z=5−4i then (z)= (A) 9 (B) 1 (C) √(14) (D) 3
+17. If z=(3+4i)(2−3i) then (z): (A) 7√(2) (B) 5√(13) (C) 13√(5) (D) 2√(7)
+18. $z\.\overline{z} =?$ (A) z^{2} (B) z^{2} (C) (z)^{2} (D) −z^{2}
+19. If z_{1}=2−3i and (z_{1}z_{2})=13 then value of ((z_{1})/(z_{2})) is: (A) 13 (B) √(13) (C) (√(13))/(13) (D) (1)/(13)
+20. For any two complex numbers z_{1},z_{2} which of the following can be true? (A) z_{1}>z_{2} (B) z_{1}<z_{2} (C) z_{1}>z_{2} (D) (z_{1})>(z_{2})

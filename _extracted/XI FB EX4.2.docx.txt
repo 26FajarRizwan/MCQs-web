@@ -1,0 +1,21 @@
+Q1. Choose the correct option. (10X1=10)
+1. The sum of n indicated number of terms in the sequence is called:
+(A) Finite sequence (B) Infinite sequence (C) Series (D) Mean
+2. 7th partial sum of a sequence (n^{2}) equals to:
+(A) 49 (B) 130 (C) 140 (D) 160
+3. Sum of n terms of an A.P is:
+(A) (n)/(2)(2a_{1}+(n−1)d) (B) (a_{1}(1−r^{n}))/(1−r) (C) (a_{1})/(1−r) (D) (1)/(2)(2a_{1}+(n−1)d)
+4. The sum of the series -3 + (-1) + 1 + 3 + 5 + .......... to n is:
+(A) 290 (B) 190 (C) 192 (D) None of these
+5. The sum of first 100 positive integers:
+(A) 5050 (B) 5051 (C) 5052 (D) None of these
+6. A family saves money in an arithmetic sequence Rs. 6000 in first year, 70,000 in 2nd year and so on for 20 years. How much do they save in all?
+(A) 122800 (B) 1228000 (C) 12280000 (D) None of these
+7. How many multiples of 4 between 14 and 523 is:
+(A) 126 (B) 127 (C) 128 (D) 227
+8. The sum of three numbers in A.P is 24 and their product 440 then the numbers are:
+(A) 5, 9, 10 (B) 4, 9, 11 (C) 5, 8, 11 (D) 4, 5, 15
+9. A man repays his loan of Rs. 1120 by paying Rs. 15 in the first installment and then increase the payment by Rs. 10 every month. How long will take to clear his loan?
+(A) 14 (B) 15 (C) 13 (D) 12
+10. If a_{1}=17, a_{n}=101 and S_{n}=472 then n = ?
+(A) 7 (B) 8 (C) 9 (D) None of these

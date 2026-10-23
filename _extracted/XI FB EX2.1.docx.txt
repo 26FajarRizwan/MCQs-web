@@ -1,0 +1,16 @@
+Q1. Choose the correct option. exercise 2.1
+1. In the 19th century the term matrix was introduced by: (A) Arthur Cayley (B) James Sylvester (C) Leibniz (D) Seki Kowa
+2. Which of the given values of x and y makes the pair of matrices (3x+75y+14) and (0y−28−7) equal: (A) x=(1)/(3);y=7 (B) x=(2)/(−3);y=(4)/(7) (C) x=(4)/(3);y=(4)/(3) (D) x=−(7)/(3);y=7
+3. For a Symmetric matrix A; which one is true? (A) a_{ij}=−a_{ji},∀i≠j (B) a_{ij}=a_{ji},∀i=j (C) a_{ij}=a_{ji},∀i≠j (D) a_{ij}=−a_{ji},∀i≠j
+4. The matrix (100020004) is a: (A) Symmetric matrix (B) Skew-symmetric matrix (C) Identity matrix (D) Null matrix
+5. Order of the matrix (234) is: (A) 2×1 (B) 1×3 (C) 3×1 (D) 3×2
+6. If order of a matrix is 3×5, then number of elements in each column will be: (A) 3 (B) 5 (C) 15 (D) 8
+7. In an identity matrix all the diagonal elements are: (A) Zero (B) 1 (C) -1 (D) 2
+8. For a scalar matrix A=(a_{ij})_{m×n}; which is true? (A) a_{ij}=0,∀i≠j and a_{ij}=k (B) a_{ij}≠0,i=j and a_{ij}≠k (C) a_{ij}≠0,i≠j and a_{ij}=k (D) a_{ij}=0,i≠j and a_{ij}=k,∀i≠j
+9. The matrix (1) is: (A) Square matrix (B) Column matrix (C) Unit matrix (D) All of these
+10. The number of elements in the matrix 4×5 will be: (A) 4 (B) 5 (C) 9 (D) 20
+11. A matrix is said to be column if it has: (A) One row (B) One column (C) One row and two columns (D) Two columns
+12. The principal diagonal/main diagonal elements in the matrix A=(1−31241356) are: (A) 1, -3, 1 (B) 1, 4, 3 (C) 1, 4, 6 (D) 3, 5, 6
+13. A square matrix A is called skew-symmetric matrix if: (A) A^{t}=A (B) A^{t}=−A (C) (A^{t})^{t}=A (D) A^{t}=A^{2}
+14. If a matrix have 16 elements, what are the total possible orders it can have? (A) 4 (B) 5 (C) 6 (D) 7
+15. If name of rows are not equal to number of columns, then matrix is called: (A) Row matrix (B) Column matrix (C) Square matrix (D) Rectangular matrix

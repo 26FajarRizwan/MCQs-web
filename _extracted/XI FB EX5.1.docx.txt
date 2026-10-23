@@ -1,0 +1,141 @@
+The first Muslim mathematician who introduced Algebra was:
+Muhammad Bin Musa
+Jabir Ibn Hayyan
+Ibn Al Haytham
+Bu Ali Sina
+Use of letters to represent an unknown quantity was introduced by:
+Muhammad Bin Musa
+Rene Descartes
+Euler
+James Sylvester
+Algebraic expressions are of:
+One kind
+Two kinds
+Three kinds
+Four kinds
+What should be added to 3pq+5p^{2}q^{2}+p^{3} to get p^{3}+2p^{2}q^{2}+4pq?
+p^{2}q^{2}−pq
+2p^{2}q^{2}+pq
+−3p^{2}q^{2}+pq
+5pq+p^{2}q^{2}
+By simplifying the algebraic expression 2x^{2}(x+2)−3x(x^{2}−3)−5x(x+5), what are the coefficients?
+-1, -1, -16
+-16, -4, -1
+5, 3, 2
+2, 3, -1
+Which of the following is a polynomial:
+(x^{2})/(2)
+√(2x)−1
+x^{2}+(3x)/(x)
+(x)/(x+1)
+Zero polynomial has degree:
+0
+1
+Any natural number
+No degree
+If P(x) = x^{2}−2√(2)x+1 then P(2√(2)) is equal to:
+0
+1
+4√(2)
+8√(2)+1
+If P(x) = x + 3 then P(x) + P(-x) is equal to:
+3
+2x
+0
+6
+The degree of the constant polynomial is:
+0
+1
+2
+Not defined
+Which of the following is a linear polynomial?
+x+(2)/(x)+3
+√(x)−1
+-7x
+Both B and C
+-9xyz is a ________ polynomial.
+Cubic
+Linear
+Constant
+Zero polynomial
+Ax + 2xy + 3 is a ________ polynomial.
+Linear
+Cubic
+Constant
+Quadratic
+3 is a polynomial of degree:
+1
+3
+Not defined
+0
+The restrictions on the rational expression (x^{2}+x)/(2(2x−1)) are:
+x≠(1)/(2)
+x=−(1)/(2)
+x=(1)/(2)
+x=−(1)/(2)
+Which of the following is a rational expression:
+(1)/(2)
+(x)/(2)
+(3)/(4x^{2})
+Both A and C
+What should be subtracted to the polynomial x^{2}−16x+30, so that x - 15 is the factor of the resulting polynomial?
+30
+-15
+15
+16
+If the polynomial x^{3}+9x^{2}+23x+15 is divided by x + 1, then the depressed equation is:
+x^{2}−8x+15=0
+x^{2}+8x−15=0
+x^{2}+8x+15=0
+x^{2}−8x−15=0
+If 3x^{5}−5x^{3}+2nx+3, ∀n∈Z is divided by x - 1, then remainder is:
+Odd number
+Even number
+Rational number
+Real number
+If a polynomial f(x) is divided by a linear divisor (x - a), then the remainder is:
+f(-a)
+f(a)
+a
+f(0)
+When P(x) is divided by g(x) if P(x)=x^{3}−3x^{2}+4x+50, g(x)=x−3 then the remainder is:
+0
+62
+(3)/(2)
+-4
+For what value of p the remainder is 4 when 3x^{4}−4px^{2}+5x−p is divided by x + 2:
+4
+-2
+2
+-4
+For what value of k, x + 4 is a factor of the polynomial x^{2}−x−(2k−2)?
+7
+22
+11
+44
+If x^{2}−3x+2 is a factor of the polynomial f(x), then f(2) = ?
+0
+1
+2
+None of these
+2x + 7 is a factor of 2x^{3}+5x^{2}−11x−14, then factorize form of the expression will be:
+Zeros of zero polynomial are:
+0
+1
+All Real numbers
+Not defined
+Zero of the polynomial f(x) = 2x^{2}+7x−4 is:
+2
+(1)/(2)
+−(1)/(4)
+-2
+If one of the zeros of the quadratic polynomial (k-1)x^{2}+kx+1 is -3 then the value of k is:
+−(4)/(3)
+(2)/(3)
+(4)/(3)
+(2)/(3)
+If 2, 5, -2 are zeros of a polynomial then polynomial is:
+x^{3}−5x−6x
+x^{3}−5x^{2}+2x−2
+x^{3}−5x^{2}−4x+20
+None of these

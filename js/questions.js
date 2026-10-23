@@ -1,0 +1,4246 @@
+/**
+ * Fazaia Inter College — Class XI Mathematics MCQ Bank
+ * Extracted from exercise Word documents (Ex 1.1 – 5.3).
+ * correctIndex: 0 = A, 1 = B, 2 = C, 3 = D
+ * Add/edit items freely — PDF/DOCX content plugs in with this schema.
+ */
+
+const QUIZ_META = {
+  title: "XI Mathematics — Practice MCQs",
+  description: "Class XI maths MCQs covering Complex Numbers, Matrices, Vectors, Sequences & Series, and Algebra (Exercises 1.1–5.3).",
+  timeLimitMinutes: null,
+};
+
+const QUIZ_QUESTIONS = [
+  {
+    "id": 1,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "√(−1) is the ________ notation for the imaginary unit number",
+    "options": [
+      "Lagrange’s",
+      "Euler’s",
+      "Leibniz’s",
+      "Cauchy’s"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.1 · Q1"
+  },
+  {
+    "id": 2,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "A complex number is an expression of the form x+yi where x,y∈",
+    "options": [
+      "C",
+      "R",
+      "N",
+      "Q"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.1 · Q2"
+  },
+  {
+    "id": 3,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "If z=3+4i, then Im(z) is",
+    "options": [
+      "i",
+      "3",
+      "4",
+      "−4i"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX1.1 · Q3"
+  },
+  {
+    "id": 4,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "i+i^{2}+i^{3}+i^{4}+...+i^{20}=",
+    "options": [
+      "i",
+      "-1",
+      "0",
+      "1"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX1.1 · Q4"
+  },
+  {
+    "id": 5,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "√((−1)^{2})=",
+    "options": [
+      "i",
+      "−i",
+      "1",
+      "-1"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX1.1 · Q5"
+  },
+  {
+    "id": 6,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "Set of real numbers is a subset of",
+    "options": [
+      "Rational Numbers",
+      "Complex Numbers",
+      "Irrational Numbers",
+      "Integers"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.1 · Q6"
+  },
+  {
+    "id": 7,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "Set of complex numbers is denoted by",
+    "options": [
+      "R",
+      "C",
+      "N",
+      "P"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.1 · Q7"
+  },
+  {
+    "id": 8,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "Part of complex number which is along y-axis is called",
+    "options": [
+      "Real part",
+      "Imaginary part",
+      "Complex part",
+      "Both a and c"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.1 · Q8"
+  },
+  {
+    "id": 9,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "If real part of complex number is zero then it is called",
+    "options": [
+      "Unreal",
+      "Pure complex",
+      "Pure Imaginary",
+      "None of these"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX1.1 · Q9"
+  },
+  {
+    "id": 10,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "If z_{1}=2+i and z_{2}=4−3i then z_{1}z_{2}=?",
+    "options": [
+      "(11, 2)",
+      "(11, -2)",
+      "(-11, -2)",
+      "(-11, 2)"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.1 · Q10"
+  },
+  {
+    "id": 11,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "If z_{1}=3+7i and z_{2}=4+6i then (z_{1})/(z_{2})=",
+    "options": [
+      "((15)/(52),(23)/(52))",
+      "((15)/(52),−(23)/(52))",
+      "(−(15)/(26),(23)/(26))",
+      "((23)/(26),−(15)/(26))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.1 · Q11"
+  },
+  {
+    "id": 12,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "If (2+3i)x+(1+3i)y+2=0, then value of x and y",
+    "options": [
+      "x=2,y=−2",
+      "x=−2,y=2",
+      "x=3,y=2",
+      "x=−3,y=−2"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.1 · Q12"
+  },
+  {
+    "id": 13,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "Conjugate of a complex number is its mirror image about",
+    "options": [
+      "x-axis",
+      "y-axis",
+      "origin",
+      "Both B and C"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.1 · Q13"
+  },
+  {
+    "id": 14,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "Conjugate of z=(1+i)(2−i) is",
+    "options": [
+      "3+2i",
+      "3−i",
+      "4+2i",
+      "3+i"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.1 · Q14"
+  },
+  {
+    "id": 15,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "Modulus of complex number is the distance of point (x, y) from",
+    "options": [
+      "x-axis",
+      "y-axis",
+      "Origin",
+      "Both A and B"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX1.1 · Q15"
+  },
+  {
+    "id": 16,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "If z=5−4i then (z)=",
+    "options": [
+      "9",
+      "1",
+      "√(14)",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.1 · Q16"
+  },
+  {
+    "id": 17,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "If z=(3+4i)(2−3i) then (z)",
+    "options": [
+      "7√(2)",
+      "5√(13)",
+      "13√(5)",
+      "2√(7)"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.1 · Q17"
+  },
+  {
+    "id": 18,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "$z\\.\\overline{z} =?$",
+    "options": [
+      "z^{2}",
+      "z^{2}",
+      "(z)^{2}",
+      "−z^{2}"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX1.1 · Q18"
+  },
+  {
+    "id": 19,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "If z_{1}=2−3i and (z_{1}z_{2})=13 then value of ((z_{1})/(z_{2})) is",
+    "options": [
+      "13",
+      "√(13)",
+      "(√(13))/(13)",
+      "(1)/(13)"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX1.1 · Q19"
+  },
+  {
+    "id": 20,
+    "subject": "XI Maths · Ex 1.1 — Complex Numbers",
+    "exercise": "XI FB EX1.1",
+    "question": "For any two complex numbers z_{1},z_{2} which of the following can be true?",
+    "options": [
+      "z_{1}>z_{2}",
+      "z_{1}<z_{2}",
+      "z_{1}>z_{2}",
+      "(z_{1})>(z_{2})"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX1.1 · Q20"
+  },
+  {
+    "id": 21,
+    "subject": "XI Maths · Ex 1.2 — Complex Numbers",
+    "exercise": "XI FB EX1.2",
+    "question": "Im((x_{1}+iy_{1})/(x_{2}+iy_{2}))=",
+    "options": [
+      "(x_{1}y_{2}-x_{2}y_{1})/(x_{1}^{2}+y_{1}^{2})",
+      "(x_{1}y_{2}-x_{2}y_{1})/(x_{1}^{2}+y_{1}^{2})",
+      "(x_{1}y_{1}-x_{2}y_{2})/(x_{2}^{2}+y_{2}^{2})",
+      "(x_{1}y_{2}-x_{2}y_{1})/(x_{2}^{2}+y_{2}^{2})"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX1.2 · Q1"
+  },
+  {
+    "id": 22,
+    "subject": "XI Maths · Ex 1.2 — Complex Numbers",
+    "exercise": "XI FB EX1.2",
+    "question": "Real part of z=((12+5i)/(3+2i))^{2} is:",
+    "options": [
+      "(-2035)/(169)",
+      "(2035)/(169)",
+      "(2049)/(169)",
+      "(2049)/(169)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.2 · Q2"
+  },
+  {
+    "id": 23,
+    "subject": "XI Maths · Ex 1.2 — Complex Numbers",
+    "exercise": "XI FB EX1.2",
+    "question": "For any complex number z, Re(z) =",
+    "options": [
+      "Im(iz)",
+      "-Im(iz)",
+      "-Im(z)",
+      "Im(z)"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.2 · Q3"
+  },
+  {
+    "id": 24,
+    "subject": "XI Maths · Ex 1.3 — Complex Numbers",
+    "exercise": "XI FB EX1.3",
+    "question": "A system of equations is consistent of it has ____________ solution",
+    "options": [
+      "At least one",
+      "Only one",
+      "No solution",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.3 · Q1"
+  },
+  {
+    "id": 25,
+    "subject": "XI Maths · Ex 1.3 — Complex Numbers",
+    "exercise": "XI FB EX1.3",
+    "question": "A system of equations which has no solution is called",
+    "options": [
+      "Consistent",
+      "Inconsistent",
+      "Trivial",
+      "Non-trivial"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.3 · Q2"
+  },
+  {
+    "id": 26,
+    "subject": "XI Maths · Ex 1.3 — Complex Numbers",
+    "exercise": "XI FB EX1.3",
+    "question": "For what value of w and z, the simultaneous. System of linear equations satisfy: (1-i)z+(1+i)w=3 and 2z-(2+5i)w=2+3i",
+    "options": [
+      "w=(2-7i)/(53);z=(145+155i)/(106)",
+      "w=(2-7i)/(53);z=(145+155i)/(53)",
+      "w=(2+7i)/(53);z=(145-155i)/(106)",
+      "w=(7+2i)/(53);z=(145-155i)/(106)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.3 · Q3"
+  },
+  {
+    "id": 27,
+    "subject": "XI Maths · Ex 1.3 — Complex Numbers",
+    "exercise": "XI FB EX1.3",
+    "question": "What should be added to the equation 2z^{2}-6z-9=0 to complete the square",
+    "options": [
+      "((-3)/(2))^{2}",
+      "((1)/(2))^{2}",
+      "((-1)/(2))^{2}",
+      "((5)/(2))^{2}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.3 · Q4"
+  },
+  {
+    "id": 28,
+    "subject": "XI Maths · Ex 1.3 — Complex Numbers",
+    "exercise": "XI FB EX1.3",
+    "question": "Factors of 2z^{3}+9z^{2}-11z-30 are",
+    "options": [
+      "(z-2)(z+5)(z-5)",
+      "(z-2)(z+2)(z+5)",
+      "(z-2)(z+5)(2z+3)",
+      "(z-3)(z+5)(2z+3)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.3 · Q5"
+  },
+  {
+    "id": 29,
+    "subject": "XI Maths · Ex 1.3 — Complex Numbers",
+    "exercise": "XI FB EX1.3",
+    "question": "Solution of the quadratic equation z^{2}-9z+11=0 are",
+    "options": [
+      "((9±√(37))/(2))",
+      "((9±√(37))/(4))",
+      "((4±√(41))/(2))",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.3 · Q6"
+  },
+  {
+    "id": 30,
+    "subject": "XI Maths · Ex 1.3 — Complex Numbers",
+    "exercise": "XI FB EX1.3",
+    "question": "The depressed equation of the polynomial P(z)=z^{3}+2z^{2}-5z-6 is",
+    "options": [
+      "z^{2}+z-6",
+      "z^{2}-z-6",
+      "z^{2}-z+6",
+      "z^{2}+z+6"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.3 · Q7"
+  },
+  {
+    "id": 31,
+    "subject": "XI Maths · Ex 1.3 — Complex Numbers",
+    "exercise": "XI FB EX1.3",
+    "question": "Factors of P(z)=z^{4}-(3)/(25) are",
+    "options": [
+      "(z+(√(3))/(5))(z-(√(3))/(5))",
+      "(z+(√(3))/(5))(z-(3)/(5))",
+      "(z+(3)/(5))(z-(√(3))/(5))",
+      "(z+(3)/(5))(z-(3)/(5)) Im((x_{1}+iy_{1})/(x_{2}+iy_{2}))=a)(x_{1}y_{2}-x_{2}y_{1})/(x_{1}^{2}+y_{1}^{2})B)(x_{1}y_{2}-x_{2}y_{1})/(x_{1}^{2}+y_{1}^{2})C)(x_{1}y_{1}-x_{2}y_{2})/(x_{2}^{2}+y_{2}^{2})D)(x_{1}y_{2}-x_{2}y_{1})/(x_{2}^{2}+y_{2}^{2}) Real part of z=((12+5i)/(3+2i))^{2} is: (-2035)/(169) (2035)/(169) (2049)/(169) (2049)/(169) For any complex number z, Re(z) =A) Im(iz)B)-Im(iz)C)-Im(z)D) Im(z)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.3 · Q8"
+  },
+  {
+    "id": 32,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "If z=√(2)+√(2)i then polar coordinates of z are",
+    "options": [
+      "(1,(π)/(4))",
+      "(2,(π)/(4))",
+      "(√(2),(π)/(4))",
+      "(2√(2),(π)/(4))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q1 — verify answer key"
+  },
+  {
+    "id": 33,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Polar coordinates of the complex number z=x+yi are",
+    "options": [
+      "(r,θ)",
+      "(θ,r)",
+      "(−r,−θ)",
+      "(r,−θ)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q2 — verify answer key"
+  },
+  {
+    "id": 34,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Polar coordinates of the conjugate of z=x+yi are",
+    "options": [
+      "(r,θ)",
+      "(r,−θ)",
+      "(−r,−θ)",
+      "(r,−θ)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q3 — verify answer key"
+  },
+  {
+    "id": 35,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "What is the position of the particle from mean position when amplitude is 0.0004mm and angle is (π)/(3)",
+    "options": [
+      "(1)/(500)(1+√(3)i)",
+      "(1)/(5000)(1+√(3)i)",
+      "(1)/(5000)(√(3)+i)",
+      "(1)/(500)(√(3)+i)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q4 — verify answer key"
+  },
+  {
+    "id": 36,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "The polar coordinates (2,(π)/(3)) gives the complex number in cartesian form is",
+    "options": [
+      "1+√(3)i",
+      "√(3)+i",
+      "(√(3))/(2)+(i)/(2)",
+      "2(1+√(3)i)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q5 — verify answer key"
+  },
+  {
+    "id": 37,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Polar form of z=x+yi is",
+    "options": [
+      "z=rcosθ−isinθ",
+      "z=r(cosθ+isinθ)",
+      "z=rsinθ+icosθ",
+      "z=r(sinθ+icosθ)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q6 — verify answer key"
+  },
+  {
+    "id": 38,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "The complex number z=(cosθ+isinθ) can also be written as",
+    "options": [
+      "z=cisθ",
+      "z=sicθ",
+      "z=e^{iθ}",
+      "Both A and C"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q7 — verify answer key"
+  },
+  {
+    "id": 39,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "The argument of a complex number that lies in the interval −π<θ≤π is called",
+    "options": [
+      "Principal argument",
+      "Limited argument",
+      "Minimum argument",
+      "Maximum argument"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q8"
+  },
+  {
+    "id": 40,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "In complex plane, real part is drawn along",
+    "options": [
+      "x-axis",
+      "y-axis",
+      "origin",
+      "xy-plane"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q9"
+  },
+  {
+    "id": 41,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Principal argument of z lies in the interval",
+    "options": [
+      "−π<θ≤π",
+      "−π≤θ≤π",
+      "−π≤θ<π",
+      "−π<θ<π"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q10 — verify answer key"
+  },
+  {
+    "id": 42,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Principal argument of √(3)−i is",
+    "options": [
+      "(π)/(6)",
+      "(5π)/(6)",
+      "−(5π)/(6)",
+      "−(π)/(6)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q11 — verify answer key"
+  },
+  {
+    "id": 43,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "e^{iθ} is known as",
+    "options": [
+      "Euler’s formula",
+      "Complex formula",
+      "Exponential formula",
+      "Cauchy’s formula"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q12"
+  },
+  {
+    "id": 44,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Write z=−2−2i in polar form",
+    "options": [
+      "2√(2)(cos(3π)/(4)+isin(3π)/(4))",
+      "2√(2)(cos(3π)/(4)−isin(3π)/(4))",
+      "2√(2)(−cos(3π)/(4)+isin(3π)/(4))",
+      "2√(2)(−cos(3π)/(4)−isin(3π)/(4))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q13 — verify answer key"
+  },
+  {
+    "id": 45,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Rectangular form of z=2(cos((π)/(3))+isin((π)/(3))) is",
+    "options": [
+      "1+i√(3)",
+      "i",
+      "√(3)+i",
+      "2i"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q14 — verify answer key"
+  },
+  {
+    "id": 46,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Rectangular form of z=(2(cos((π)/(6))−isin((π)/(6))))/(4) is",
+    "options": [
+      "−(1)/(2)−(1)/(2)",
+      "(1)/(2)",
+      "(1)/(2)",
+      "−(1)/(2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q15 — verify answer key"
+  },
+  {
+    "id": 47,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "If z=r(cosθ+isinθ) then z^{−1}=",
+    "options": [
+      "r^{−1}(cos^{−1}θ+isin^{−1}θ)",
+      "(1)/(r)(cosθ−isinθ)",
+      "(1)/(r)(−cosθ+isinθ)",
+      "r(cosθ−isinθ)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q16 — verify answer key"
+  },
+  {
+    "id": 48,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Algebraic form of z=√(2)(cos315^{∘}+isin315^{∘}) is",
+    "options": [
+      "1+i",
+      "1−i",
+      "i",
+      "2+i"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q17 — verify answer key"
+  },
+  {
+    "id": 49,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "In x=x_{max}e^{iωt}, ω is the",
+    "options": [
+      "Velocity",
+      "Angular Velocity",
+      "Acceleration",
+      "Displacement"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.4 · Q18"
+  },
+  {
+    "id": 50,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "The resistance of flow of electricity ’Z’ is called",
+    "options": [
+      "Impedance",
+      "Voltage",
+      "Amplitude",
+      "Watt"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q19"
+  },
+  {
+    "id": 51,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Value of impedance Z, if E=(100+10i) volts and I=(−8+3i) amps",
+    "options": [
+      "(10)/(73)(77+38i)",
+      "(−10)/(73)(38+77i)",
+      "(10)/(73)(77−38i)",
+      "(−10)/(73)(77+38i)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q20 — verify answer key"
+  },
+  {
+    "id": 52,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "In simple harmonic motion we have to determine the position of the microscopic particle form its",
+    "options": [
+      "Maximum position",
+      "Mean position",
+      "Minimum position",
+      "Least position"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.4 · Q21"
+  },
+  {
+    "id": 53,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "The angular velocity ω=?",
+    "options": [
+      "(2π)/(f)",
+      "(f)/(2π)",
+      "2πf",
+      "(π)/(2f)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q22 — verify answer key"
+  },
+  {
+    "id": 54,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "The electromotive force ’E’ is called",
+    "options": [
+      "Voltage",
+      "Impedance",
+      "Frequency",
+      "Amplitude"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q23"
+  },
+  {
+    "id": 55,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Which equation gives the position of particle from its mean position",
+    "options": [
+      "x=x_{max}e^{iωt}",
+      "x_{max}=xe^{iθ}",
+      "x=x_{max}e^{iθ}",
+      "xe^{iθ}x_{max}=1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q24 — verify answer key"
+  },
+  {
+    "id": 56,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Every real number is also a ________ number",
+    "options": [
+      "Natural",
+      "Integer",
+      "Complex",
+      "Rational"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX1.4 · Q25"
+  },
+  {
+    "id": 57,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Every complex number has ________",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "No"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX1.4 · Q26"
+  },
+  {
+    "id": 58,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Magnitude of a complex number Z is the distance of z from",
+    "options": [
+      "(0, 0)",
+      "(1, 0)",
+      "(0, 1)",
+      "(1, 1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q27"
+  },
+  {
+    "id": 59,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "If Z is a complex number then its mirror image is",
+    "options": [
+      "z",
+      "(1)/(z)",
+      "z̄",
+      "Z"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q28 — verify answer key"
+  },
+  {
+    "id": 60,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "If z_{1}=3+2i and z_{2}=−3−2i then",
+    "options": [
+      "z_{1}>z_{2}",
+      "z_{1}<z_{2}",
+      "z_{1}=z_{2}",
+      "z_{1}=−z_{2}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q30 — verify answer key"
+  },
+  {
+    "id": 61,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "Diagram representing a complex number is called ________ diagram",
+    "options": [
+      "Vector",
+      "Venn",
+      "Argand",
+      "Ordered pair"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX1.4 · Q31"
+  },
+  {
+    "id": 62,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "If z=3+4i z^{−1} is",
+    "options": [
+      "(11)/(3)",
+      "((3)/(25),(−4)/(25))",
+      "((3)/(25),(4)/(25))",
+      "((−3)/(25),(−4)/(25))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q32 — verify answer key"
+  },
+  {
+    "id": 63,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "The value of √((−25)(−4)) is",
+    "options": [
+      "i√(10)",
+      "−10",
+      "10i",
+      "10"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q33 — verify answer key"
+  },
+  {
+    "id": 64,
+    "subject": "XI Maths · Ex 1.4 — Complex Numbers",
+    "exercise": "XI FB EX1.4",
+    "question": "If ((1+i)/(1−i))^{n}=1, then least positive value of n is",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX1.4 · Q34 — verify answer key"
+  },
+  {
+    "id": 65,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "In the 19th century the term matrix was introduced by",
+    "options": [
+      "Arthur Cayley",
+      "James Sylvester",
+      "Leibniz",
+      "Seki Kowa"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.1 · Q1"
+  },
+  {
+    "id": 66,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "Which of the given values of x and y makes the pair of matrices (3x+75y+14) and (0y−28−7) equal",
+    "options": [
+      "x=(1)/(3);y=7",
+      "x=(2)/(−3);y=(4)/(7)",
+      "x=(4)/(3);y=(4)/(3)",
+      "x=−(7)/(3);y=7"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q2 — verify answer key"
+  },
+  {
+    "id": 67,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "For a Symmetric matrix A; which one is true?",
+    "options": [
+      "a_{ij}=−a_{ji},∀i≠j",
+      "a_{ij}=a_{ji},∀i=j",
+      "a_{ij}=a_{ji},∀i≠j",
+      "a_{ij}=−a_{ji},∀i≠j"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q3 — verify answer key"
+  },
+  {
+    "id": 68,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "The matrix (100020004) is a",
+    "options": [
+      "Symmetric matrix",
+      "Skew-symmetric matrix",
+      "Identity matrix",
+      "Null matrix"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q4 — verify answer key"
+  },
+  {
+    "id": 69,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "Order of the matrix (234) is",
+    "options": [
+      "2×1",
+      "1×3",
+      "3×1",
+      "3×2"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q5 — verify answer key"
+  },
+  {
+    "id": 70,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "If order of a matrix is 3×5, then number of elements in each column will be",
+    "options": [
+      "3",
+      "5",
+      "15",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q6 — verify answer key"
+  },
+  {
+    "id": 71,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "In an identity matrix all the diagonal elements are",
+    "options": [
+      "Zero",
+      "1",
+      "-1",
+      "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.1 · Q7"
+  },
+  {
+    "id": 72,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "For a scalar matrix A=(a_{ij})_{m×n}; which is true?",
+    "options": [
+      "a_{ij}=0,∀i≠j and a_{ij}=k",
+      "a_{ij}≠0,i=j and a_{ij}≠k",
+      "a_{ij}≠0,i≠j and a_{ij}=k",
+      "a_{ij}=0,i≠j and a_{ij}=k,∀i≠j"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q8 — verify answer key"
+  },
+  {
+    "id": 73,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "The matrix (1) is",
+    "options": [
+      "Square matrix",
+      "Column matrix",
+      "Unit matrix",
+      "All of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q9 — verify answer key"
+  },
+  {
+    "id": 74,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "The number of elements in the matrix 4×5 will be",
+    "options": [
+      "4",
+      "5",
+      "9",
+      "20"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q10 — verify answer key"
+  },
+  {
+    "id": 75,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "A matrix is said to be column if it has",
+    "options": [
+      "One row",
+      "One column",
+      "One row and two columns",
+      "Two columns"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.1 · Q11"
+  },
+  {
+    "id": 76,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "The principal diagonal/main diagonal elements in the matrix A=(1−31241356) are",
+    "options": [
+      "1, -3, 1",
+      "1, 4, 3",
+      "1, 4, 6",
+      "3, 5, 6"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q12 — verify answer key"
+  },
+  {
+    "id": 77,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "A square matrix A is called skew-symmetric matrix if",
+    "options": [
+      "A^{t}=A",
+      "A^{t}=−A",
+      "(A^{t})^{t}=A",
+      "A^{t}=A^{2}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.1 · Q13"
+  },
+  {
+    "id": 78,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "If a matrix have 16 elements, what are the total possible orders it can have?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.1 · Q14"
+  },
+  {
+    "id": 79,
+    "subject": "XI Maths · Ex 2.1 — Matrices & Determinants",
+    "exercise": "XI FB EX2.1",
+    "question": "If name of rows are not equal to number of columns, then matrix is called",
+    "options": [
+      "Row matrix",
+      "Column matrix",
+      "Square matrix",
+      "Rectangular matrix"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX2.1 · Q15"
+  },
+  {
+    "id": 80,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "If (x1)(10−20)=(00), then x equals to",
+    "options": [
+      "0",
+      "-2",
+      "2",
+      "1"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.2 · Q1"
+  },
+  {
+    "id": 81,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "Suppose P and Q are two different matrices of order 3 x n and n x p respectively, then order of the matrix PQ will be",
+    "options": [
+      "p × 3",
+      "3 × p",
+      "n × n",
+      "PQ is not defined"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.2 · Q2"
+  },
+  {
+    "id": 82,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "Two matrices A and B are comfortable for multiplication AB if",
+    "options": [
+      "Number of column in B = Number of rows in A",
+      "Number of row in A = Number of rows in B",
+      "Number of columns in A = Number of row in B",
+      "Number of columns in A = Number of columns in B"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX2.2 · Q3"
+  },
+  {
+    "id": 83,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "The property A + (-A) = 0, for a matrix A is known as",
+    "options": [
+      "Commutative property w.r.t addition",
+      "Associative property w.r.t addition",
+      "Existence of additive identity",
+      "Existence of additive inverse"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX2.2 · Q4"
+  },
+  {
+    "id": 84,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "Akash purchased coffee, sugar, wheat flour and teff flour from a shop as shown by the matrix A=(126322115.512060301809045); if he halves his order, then new matrix will be",
+    "options": [
+      "(1222120180)",
+      "(6116090)",
+      "(35.53045)",
+      "Cannot be determined"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.2 · Q5 — verify answer key"
+  },
+  {
+    "id": 85,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "For the matrices A=(23−51) and B=(4−113); the value of matrix X in the matrix equation 2X - A = B will be",
+    "options": [
+      "(124−88)",
+      "(62−44)",
+      "(31−22)",
+      "(93−33)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.2 · Q6 — verify answer key"
+  },
+  {
+    "id": 86,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "If A is a matrix of order 3 x 3 and B is a matrix of order 4 x 3, which of the following operation is possible",
+    "options": [
+      "A + B",
+      "AB",
+      "BA",
+      "BB"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX2.2 · Q7"
+  },
+  {
+    "id": 87,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "If X+Y=(5209) and X−Y=(360−1), then X =",
+    "options": [
+      "(12010)",
+      "(8808)",
+      "(4404)",
+      "(1616016)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.2 · Q8 — verify answer key"
+  },
+  {
+    "id": 88,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "If A and B are two matrices and O(A + B) = 2 x 3, then O(BA) =",
+    "options": [
+      "2 × 2",
+      "3 × 3",
+      "3 × 2",
+      "Not possible"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX2.2 · Q9"
+  },
+  {
+    "id": 89,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "If A is a matrix of order 2 x 3, then order of matrix A^{t} will be",
+    "options": [
+      "2 × 3",
+      "2 × 2",
+      "3 × 3",
+      "3 × 2"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX2.2 · Q10"
+  },
+  {
+    "id": 90,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "If A=(123−3) and B=(−16), given that AX = B, then X =",
+    "options": [
+      "(11)",
+      "(1−1)",
+      "(−11)",
+      "(−1−1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.2 · Q11 — verify answer key"
+  },
+  {
+    "id": 91,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "If A=(12ab) and A^{2}=(1001), then values of a and b are respectively",
+    "options": [
+      "(1)/(2),−1",
+      "(1)/(2),1",
+      "−(1)/(2),−1",
+      "−(1)/(2),1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.2 · Q12 — verify answer key"
+  },
+  {
+    "id": 92,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "If B is a column matrix of order 3 x 1, then order of BB^{t} is",
+    "options": [
+      "3 × 3",
+      "3 × 1",
+      "1 × 3",
+      "1 × 1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.2 · Q13"
+  },
+  {
+    "id": 93,
+    "subject": "XI Maths · Ex 2.2 — Matrices & Determinants",
+    "exercise": "XI FB EX2.2",
+    "question": "For any two matrices A and B then, (AB)^{t} equals",
+    "options": [
+      "AB",
+      "A^{t}B^{t}",
+      "B^{t}A^{t}",
+      "BA"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX2.2 · Q14"
+  },
+  {
+    "id": 94,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "Matrices A and B will be inverse of each other only if",
+    "options": [
+      "AB = BA ≠ 1",
+      "AB = 0",
+      "BA = 0",
+      "AB = BA = 1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q1"
+  },
+  {
+    "id": 95,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "Let (2x58x)=(6-273), then values of x is",
+    "options": [
+      "±3",
+      "±4",
+      "±5",
+      "±6"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q2 — verify answer key"
+  },
+  {
+    "id": 96,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "If A = (23401-1201) is a matrix, then co-factor of 4 is",
+    "options": [
+      "-2",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q3 — verify answer key"
+  },
+  {
+    "id": 97,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "(a+rbbc+rdd)=",
+    "options": [
+      "(abcd)",
+      "(badc)",
+      "(adcb)",
+      "(dacb)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q4 — verify answer key"
+  },
+  {
+    "id": 98,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "If A and B are two invertible matrices, then (AB)^{-1}=",
+    "options": [
+      "AB",
+      "A^{-1}B^{-1}",
+      "B^{-1}A^{-1}",
+      "(1)/(AB)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q5 — verify answer key"
+  },
+  {
+    "id": 99,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "If A is a matrix of order 3 x 3, such that |A| = 2, then |3A| =",
+    "options": [
+      "6",
+      "8",
+      "9",
+      "54"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX2.3 · Q6"
+  },
+  {
+    "id": 100,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "For a square matrix A of order 3 x 3, |A| = -4 and A​_{13} = 1; A​_{23} = -5; A​_{33} = 1, a​_{13} = 6; A​_{23} = 2, then a​_{33} =",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q7 — verify answer key"
+  },
+  {
+    "id": 101,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "For what value of λ, the matrix (λ13218031) is singular",
+    "options": [
+      "λ=0",
+      "λ=-(16)/(23)",
+      "λ=-(16)/(23)",
+      "λ=-(16)/(23)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q8 — verify answer key"
+  },
+  {
+    "id": 102,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "For the matrix A = (1232-1303-1), minor of a​_{22} is",
+    "options": [
+      "1",
+      "-1",
+      "0",
+      "91"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q9 — verify answer key"
+  },
+  {
+    "id": 103,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "For the matrix A = (2-3560415-7), M​_{13}+ A​_{22} =",
+    "options": [
+      "30",
+      "-19",
+      "-49",
+      "11"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q10 — verify answer key"
+  },
+  {
+    "id": 104,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "For any square matrix A of order n x n, the co-factor of an element a_{ij} of matrix A is denoted by A​_{ij} and is defined as",
+    "options": [
+      "A​_{ij} = M​_{ij}",
+      "A​_{ij} = (-1)^{-i}M​_{ij}",
+      "A​_{ij} = (-1)^{i+j}M​_{ij}",
+      "A​_{ij} = (1)^{i+j}M​_{ij}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q11"
+  },
+  {
+    "id": 105,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "For a square matrix A of order 3 x 3, Adj A =",
+    "options": [
+      "(A_{11}A_{12}A_{13}A_{21}A_{22}A_{23}A_{31}A_{32}A_{33})",
+      "(A_{11}A_{21}A_{31}A_{12}A_{22}A_{32}A_{13}A_{23}A_{33})",
+      "(A_{11}A_{21}A_{31}A_{12}A_{22}A_{32}A_{13}A_{23}A_{33})^{t}",
+      "All of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q12 — verify answer key"
+  },
+  {
+    "id": 106,
+    "subject": "XI Maths · Ex 2.3 — Matrices & Determinants",
+    "exercise": "XI FB EX2.3",
+    "question": "If A = (x111) and (1)/(",
+    "options": [
+      ") = 7, then x = (A) (7)/(8)",
+      "(8)/(7)",
+      "(9)/(7)",
+      "(7)/(5)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.3 · Q13 — verify answer key"
+  },
+  {
+    "id": 107,
+    "subject": "XI Maths · Ex 2.5 — Matrices & Determinants",
+    "exercise": "XI FB EX2.5",
+    "question": "For the matrix (1−21731−122327), R_{2}−3R_{1} will be equal to",
+    "options": [
+      "(1−2171−2172327)",
+      "(1−21707−4−19070−7)",
+      "(1−21707−4−192327)",
+      "(1−217232707−4−19)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.5 · Q1 — verify answer key"
+  },
+  {
+    "id": 108,
+    "subject": "XI Maths · Ex 2.5 — Matrices & Determinants",
+    "exercise": "XI FB EX2.5",
+    "question": "Which of the following matrix is in echelon form?",
+    "options": [
+      "(1−21707−4192327)",
+      "(1−217000001−24)",
+      "(1−2−4001000)",
+      "(1−2−4012000)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.5 · Q2 — verify answer key"
+  },
+  {
+    "id": 109,
+    "subject": "XI Maths · Ex 2.5 — Matrices & Determinants",
+    "exercise": "XI FB EX2.5",
+    "question": "The matrix in reduced echelon form is",
+    "options": [
+      "(01061034500010.401100)",
+      "(13−61000014−30001−200000)",
+      "(130000010−30001−200000)",
+      "(130000010−30000100000)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.5 · Q3 — verify answer key"
+  },
+  {
+    "id": 110,
+    "subject": "XI Maths · Ex 2.5 — Matrices & Determinants",
+    "exercise": "XI FB EX2.5",
+    "question": "The number of non-zero rows of a matrix in the echelon form is called",
+    "options": [
+      "Adjoint of a matrix",
+      "Inverse of a matrix",
+      "Rank of a matrix",
+      "Transpose of a matrix"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX2.5 · Q4"
+  },
+  {
+    "id": 111,
+    "subject": "XI Maths · Ex 2.5 — Matrices & Determinants",
+    "exercise": "XI FB EX2.5",
+    "question": "Rank of the matrix (111) is",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.5 · Q5"
+  },
+  {
+    "id": 112,
+    "subject": "XI Maths · Ex 2.5 — Matrices & Determinants",
+    "exercise": "XI FB EX2.5",
+    "question": "Rank of the matrix (1000100−10) is",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX2.5 · Q6"
+  },
+  {
+    "id": 113,
+    "subject": "XI Maths · Ex 2.5 — Matrices & Determinants",
+    "exercise": "XI FB EX2.5",
+    "question": "For echelon form of a matrix. If a row does not consist entirely of zeros, then first non-zero number in the row should be",
+    "options": [
+      "-2",
+      "1",
+      "-1",
+      "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.5 · Q7"
+  },
+  {
+    "id": 114,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "For a unique solution of system rank of matrix A must be equal to",
+    "options": [
+      "Rank of A_{b}",
+      "Rank of A",
+      "(A_{b})",
+      "(A)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q1"
+  },
+  {
+    "id": 115,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "The value of x, for the non-homogenous system of linear equations 2x+3y−z=1,x−y+z=3;x+2y−z=1 is",
+    "options": [
+      "-4",
+      "-5",
+      "1",
+      "4"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q2 — verify answer key"
+  },
+  {
+    "id": 116,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "Trivial solution of the system of homogenous equations a_{1}x+b_{1}y+c_{1}z=0a_{2}x+b_{2}y+c_{2}z=0a_{3}x+b_{3}y+c_{3}z=0 is",
+    "options": [
+      "(0, 0, 1)",
+      "(0, 1, 0)",
+      "(1, 0, 0)",
+      "(0, 0, 0)"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX2.6 · Q3"
+  },
+  {
+    "id": 117,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "Condition for the system a_{1}x+b_{1}y+c_{1}z=0a_{2}x+b_{2}y+c_{2}z=0a_{3}x+b_{3}y+c_{3}z=0 has non-trivial solution if",
+    "options": [
+      "(A)≠0",
+      "(A)=0",
+      "A=1",
+      "(A)=−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.6 · Q4"
+  },
+  {
+    "id": 118,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "Augmented matrix of the system of linear equations 3x−2y+z=5;x+3y−z=0;−x+4z=11 is",
+    "options": [
+      "(3−21513−10−10411)",
+      "(3−251130−1−10114)",
+      "(3−21513−10−10411)",
+      "(31−111−23001−145)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q5 — verify answer key"
+  },
+  {
+    "id": 119,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "The augmented matrix (125701340001) is in row reduced echelon form, then the system of linear equations has",
+    "options": [
+      "Unique solution",
+      "Trivial solution",
+      "Infinitely many solutions",
+      "No solution"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q6 — verify answer key"
+  },
+  {
+    "id": 120,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "The augmented matrix of a system of linear equations in the variables x, y and z in reduced row-echelon form is (100201010013), then",
+    "options": [
+      "x=3;y=1;z=2",
+      "x=2;y=1;z=3",
+      "x=0;y=0;z=0",
+      "x=1;y=1;z=3"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q7 — verify answer key"
+  },
+  {
+    "id": 121,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "The system of linear equations a_{1}x+b_{1}y+c_{1}z=k_{1}a_{2}x+b_{2}y+c_{2}z=k_{2}a_{3}x+b_{3}y+c_{3}z=k_{3} is called system of homogenous linear equations if",
+    "options": [
+      "a_{1}=a_{2}=a_{3}=0",
+      "b_{1}=b_{2}=b_{3}=0",
+      "c_{1}=c_{2}=c_{3}=0",
+      "k_{1}=k_{2}=k_{3}=0"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX2.6 · Q8"
+  },
+  {
+    "id": 122,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "How many solutions does the system 3x−2y+z=02x+y−3z=0x−y+z=0 has",
+    "options": [
+      "Only trivial solution",
+      "Non-trivial solution",
+      "Unique solution",
+      "No solution"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q9 — verify answer key"
+  },
+  {
+    "id": 123,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "For what value of λ, the system x+2y−3z=43x−y+5z=24x+y+(λ^{2}−14)z=λ+2 has no solution",
+    "options": [
+      "λ=±3",
+      "λ=±2",
+      "λ=±4",
+      "λ=±1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q11 — verify answer key"
+  },
+  {
+    "id": 124,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "In the system x+y+2z=12x+y+z=13x−5y+4z=−3 , the matrix (1122113−54) is called",
+    "options": [
+      "Matrix of co-factors",
+      "Matrix of co-efficients",
+      "Augmented matrix",
+      "All of these"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.6 · Q12"
+  },
+  {
+    "id": 125,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "Solution of the system of equations x+y=5;x−y=1 is",
+    "options": [
+      "{(2,3)}",
+      "{(−2,−3)}",
+      "{(3,2)}",
+      "{(−3,−2)}"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX2.6 · Q13"
+  },
+  {
+    "id": 126,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "If order of A is m x n and order of B is n x p then order of AB is",
+    "options": [
+      "n x p",
+      "m x p",
+      "p x m",
+      "n x n"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.6 · Q14"
+  },
+  {
+    "id": 127,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "If A is a row matrix of order 1 x n then order of A^{t}A is",
+    "options": [
+      "1 x n",
+      "n x 1",
+      "1 x 1",
+      "n x n"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX2.6 · Q15"
+  },
+  {
+    "id": 128,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "For an element a_{ij} of a square matrix A",
+    "options": [
+      "a_{ij}=(−1)^{i+j}A_{ij}",
+      "a_{ij}=(−1)^{i+j}M_{ij}",
+      "A_{ij}=((−1)^{i+j})/(M_{ij})",
+      "a_{ij}=M_{ij}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q16 — verify answer key"
+  },
+  {
+    "id": 129,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "If A is any matrix then A and A^{t} are always conformable for: 18. If A is a square matrix of order 3 × 3 and",
+    "options": [
+      "=3 then value of (adjA) is: (A) 3",
+      "(1)/(3)",
+      "9",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q17 — verify answer key"
+  },
+  {
+    "id": 130,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "For the square matrix A or order 3 × 3 with",
+    "options": [
+      "=9;A_{21}=2;A_{22}=3;A_{23}=−1;a_{21}=1;a_{23}=2, the value of a_{22} is: (A) 2",
+      "3",
+      "9",
+      "-1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX2.6 · Q19 — verify answer key"
+  },
+  {
+    "id": 131,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "System of homogenous linear equations has non-trivial solution if",
+    "options": [
+      "(A)>0",
+      "(A)<0",
+      "(A)=0",
+      "(A)≠0"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX2.6 · Q20"
+  },
+  {
+    "id": 132,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "For non-homogenous system of equation; the system is In-consistent if",
+    "options": [
+      "Rank A = Rank A_{b}",
+      "Rank A ≠ Rank A_{b}",
+      "Rank A < no.of variables",
+      "Rank A > no.of variables"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX2.6 · Q21"
+  },
+  {
+    "id": 133,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "For a system of non-homogenous equations with three variables system will have unique solution if",
+    "options": [
+      "Rank A < 3",
+      "Rank A_{b} < 3",
+      "Rank A = Rank A_{b} = 3",
+      "Rank A = Rank A_{b} < 3"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX2.6 · Q22"
+  },
+  {
+    "id": 134,
+    "subject": "XI Maths · Ex 2.6 — Matrices & Determinants",
+    "exercise": "XI FB EX2.6",
+    "question": "A system of non-homogenous equations having infinite many solutions can be solved by using",
+    "options": [
+      "Inversion method",
+      "Cramer’s rule",
+      "Gauss-Jordan method",
+      "All of these"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX2.6 · Q23"
+  },
+  {
+    "id": 135,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If the sum of two unit vectors is a unit vector, then magnitude of their difference is",
+    "options": [
+      "(1)/(√(2))",
+      "√(2)",
+      "√(3)",
+      "(1)/(√(2))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q1 — verify answer key"
+  },
+  {
+    "id": 136,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "The scalar product of two non-zero vector a and b is denoted by a.b and is define as",
+    "options": [
+      "a.b = |a||b|sinθ",
+      "a.b = |a||b|sin n",
+      "a.b = |a||b|cosθ",
+      "a.b = |a||b|coson"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q2 — verify answer key"
+  },
+  {
+    "id": 137,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "Which of the following is true?",
+    "options": [
+      "i.j = 0",
+      "i.j = k",
+      "k.j = -j.k",
+      "k.k = 1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q3 — verify answer key"
+  },
+  {
+    "id": 138,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "The dot product of two non-zero vectors a and b is define as a.b = |a||b|cosθ where θ is",
+    "options": [
+      "0 <θ< 90°",
+      "90° ≤θ≤ 180°",
+      "0 ≤θ≤ 180°",
+      "0 ≤θ≤ 150°"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q4 — verify answer key"
+  },
+  {
+    "id": 139,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If a = b then a.b is equal to",
+    "options": [
+      "a",
+      "a​^{2}",
+      "2a",
+      "(1)/(2)a"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q5 — verify answer key"
+  },
+  {
+    "id": 140,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "Two non zero vectors a and b are orthogonal if and only if",
+    "options": [
+      "a.b = 1",
+      "a × b = 1",
+      "a.b = 0",
+      "a × b = 0"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q6 — verify answer key"
+  },
+  {
+    "id": 141,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If three vectors Ā, B̄ and C̄ have magnitudes 5, 12 and 13 and Ā+B̄=C̄ then what is the angle between B̄ and C̄ is",
+    "options": [
+      "cos^{−1}((12)/(13))",
+      "cos^{−1}((13)/(12))",
+      "cos^{−1}((5)/(13))",
+      "cos^{−1}((7)/(5))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q7 — verify answer key"
+  },
+  {
+    "id": 142,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If (Ā−B̄) = (Ā)=(B̄), then what is the angle between Ā and B̄?",
+    "options": [
+      "0°",
+      "30°",
+      "60°",
+      "90°"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q8 — verify answer key"
+  },
+  {
+    "id": 143,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If r = xī+yj̄+zk̄ then cosβ = ?",
+    "options": [
+      "(x)/(M)",
+      "(y)/(M)",
+      "(z)/(M)",
+      "√(x^{2}+y^{2}+z^{2})"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q9 — verify answer key"
+  },
+  {
+    "id": 144,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If α, β and γ are the direction angles then sin^{2}α + sin^{2}β + sin^{2}γ is equal to",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q10 — verify answer key"
+  },
+  {
+    "id": 145,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If α, β and γ are the direction angles then cos​^{2}α + cos​^{2}γ is equal to",
+    "options": [
+      "sin​^{2}α",
+      "sin​^{2}β",
+      "sin​^{2}γ",
+      "cos​^{2}β"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q11 — verify answer key"
+  },
+  {
+    "id": 146,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If 60° and 45° are two direction angles then third direction angle is",
+    "options": [
+      "(π)/(2)",
+      "(π)/(4)",
+      "(π)/(3)",
+      "(7π)/(4)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q12 — verify answer key"
+  },
+  {
+    "id": 147,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "The projection of ā=ī−2j̄+k̄ along b̄=2ī−3j̄+k̄ is",
+    "options": [
+      "(9)/(14)",
+      "(−9)/(√(14))",
+      "(−9)/(14)",
+      "(3√(3))/(3)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q13 — verify answer key"
+  },
+  {
+    "id": 148,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "The projection of ī−2j̄+ak̄ along 2ī−3j̄+2√(3)k̄ is 4 then a is",
+    "options": [
+      "√(3)",
+      "2√(3)",
+      "−√(3)",
+      "3√(3)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q14 — verify answer key"
+  },
+  {
+    "id": 149,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "Which of the following is true",
+    "options": [
+      "bcosC + cCosB = a",
+      "acosB + bcosC = b",
+      "ccosC + bcosB = a",
+      "acosB + bcosC = c"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q15 — verify answer key"
+  },
+  {
+    "id": 150,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "The work done by a force 2ī+j̄−k̄ in moving an object from A(-1, 2, 4) to B(0, 1, 3) is",
+    "options": [
+      "1 unit",
+      "2 units",
+      "3 units",
+      "4 units"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q17 — verify answer key"
+  },
+  {
+    "id": 151,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If ā=ī−3j̄+4k̄ is perpendicular to b̄=3ī−2j̄+λk̄ then value of λ is",
+    "options": [
+      "4",
+      "-4",
+      "(1)/(4)",
+      "-(1)/(4)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q18 — verify answer key"
+  },
+  {
+    "id": 152,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If r = 2ī−3j̄+4k̄ then r.ī + r.j̄ - r.k̄ is equal to",
+    "options": [
+      "5",
+      "-5",
+      "3",
+      "-3"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q19 — verify answer key"
+  },
+  {
+    "id": 153,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "The angle in ......... is a right angle",
+    "options": [
+      "Circle",
+      "Semi-circle",
+      "Triangle",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q20 — verify answer key"
+  },
+  {
+    "id": 154,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "of the triangle are concurrent",
+    "options": [
+      "Altitudes",
+      "Median",
+      "Perpendicular bisector",
+      "All of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q21 — verify answer key"
+  },
+  {
+    "id": 155,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If ū=2ī−3j̄+6k̄, v̄=ī+2j̄+k̄ then u.v =?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q22 — verify answer key"
+  },
+  {
+    "id": 156,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "Projection of ū=ī+2j̄+5k̄ along z-axis is",
+    "options": [
+      "1",
+      "-2",
+      "5",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q23 — verify answer key"
+  },
+  {
+    "id": 157,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "If ū=xī+yj̄ and ū.ī=2, ū.j̄=3 then ū is",
+    "options": [
+      "ī + 2j̄",
+      "2ī + 3j̄",
+      "3ī + 2j̄",
+      "ī + j̄"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q24 — verify answer key"
+  },
+  {
+    "id": 158,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "The angle between the vectors ū=2ī−j̄+k̄ and v̄=−ī+j̄ is",
+    "options": [
+      "(π)/(6)",
+      "(5π)/(6)",
+      "(π)/(3)",
+      "(2π)/(3)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q25 — verify answer key"
+  },
+  {
+    "id": 159,
+    "subject": "XI Maths · Ex 3.2 — Vectors",
+    "exercise": "XI FB EX3.2",
+    "question": "Which of the following triple angles can be the direction angles of a single vector",
+    "options": [
+      "45°, 45°, 60°",
+      "30°, 45°, 60°",
+      "45°, 60°, 60°",
+      "60°, 30°, 90°"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.2 · Q26 — verify answer key"
+  },
+  {
+    "id": 160,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "Which of the following is true",
+    "options": [
+      "(j×j)=1",
+      "i×j=0",
+      "j×k=k×j",
+      "k×k=0"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q1 — verify answer key"
+  },
+  {
+    "id": 161,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "For two non zero vector a and b, a×b=",
+    "options": [
+      "b×a",
+      "−b×a",
+      "−a×b",
+      "Null vector"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q2 — verify answer key"
+  },
+  {
+    "id": 162,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "The area of triangle with vertices A(0, 0), B(2, 9), C(3, 5) is",
+    "options": [
+      "17",
+      "(17)/(2)",
+      "(17)/(3)",
+      "15"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q3 — verify answer key"
+  },
+  {
+    "id": 163,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "If a and b are the adjacent side of a parallelogram then formula to find the area of parallelogram is",
+    "options": [
+      "a−b",
+      "(a⋅b)",
+      "(a×b)",
+      "(1)/(2)(a×b)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q4 — verify answer key"
+  },
+  {
+    "id": 164,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "Two non-zero vectors are parallel or anti-parallel if their cross product is",
+    "options": [
+      "1",
+      "-1",
+      "0",
+      "2"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q5 — verify answer key"
+  },
+  {
+    "id": 165,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "If two non-zero vectors a and b are parallel if angle between the vector is",
+    "options": [
+      "45^{∘}",
+      "90^{∘}",
+      "135^{∘}",
+      "180^{∘}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q7 — verify answer key"
+  },
+  {
+    "id": 166,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "If a=i−2k and b=3i−2j then a×b=?",
+    "options": [
+      "2(−3j+k)",
+      "−2(2i+3j+k)",
+      "2(i+3j−k)",
+      "2j+3j+4k"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q8 — verify answer key"
+  },
+  {
+    "id": 167,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "Which of the following is Lagrange, identity?",
+    "options": [
+      "(a×b)^{2}=(a)^{2}",
+      "^{2}−(a⋅b) (B) (a×b)^{2}=(a)^{2}(b)^{2}+(a⋅b)",
+      "(a×b)^{2}=(a)^{2}(b)^{2}−(a⋅b)^{2}",
+      "(a×b)^{2}=(a)^{2}(b)^{2}+a⋅b"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q9 — verify answer key"
+  },
+  {
+    "id": 168,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "If a⋅b=0 and a×b=0 then what about a and b",
+    "options": [
+      "a()b",
+      "a⊥b",
+      "Either a=0 or b=0",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q11 — verify answer key"
+  },
+  {
+    "id": 169,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "The moment of force 2i+3j+7k about the point (1, 2, 3) when applied at the point (-1, 2, 0)",
+    "options": [
+      "9i+8j−6k",
+      "−9i−8j+6k",
+      "9i+8j+6k",
+      "9i−8j−6k"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q12 — verify answer key"
+  },
+  {
+    "id": 170,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "The area of parallelogram if a=2i−3j+k and b=i−2j+7k are its two adjacent sides is",
+    "options": [
+      "531",
+      "√(531)",
+      "529",
+      "√(529)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q13 — verify answer key"
+  },
+  {
+    "id": 171,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "The area of parallelogram having diagonals 3i+j−2k and i−j+4k is",
+    "options": [
+      "−√(216)",
+      "√(216)",
+      "216",
+      "3√(6)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q14 — verify answer key"
+  },
+  {
+    "id": 172,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "If θ is the angle between the vectors a and b, (a×b)=a⋅b then θ is",
+    "options": [
+      "0",
+      "(π)/(4)",
+      "(π)/(2)",
+      "(π)/(2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q15 — verify answer key"
+  },
+  {
+    "id": 173,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "Unit vector perpendicular to plane containing a and b is",
+    "options": [
+      "(a×b)/(a⋅b)",
+      "(a⋅b)/(a×b)",
+      "(a×b)/((a⋅b))",
+      "(a×b)/((a×b))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q16 — verify answer key"
+  },
+  {
+    "id": 174,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "a×(b+c)+b×(c+a)+c×(a+b) is equal to",
+    "options": [
+      "1",
+      "-1",
+      "0",
+      "3a×(b+c)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q17 — verify answer key"
+  },
+  {
+    "id": 175,
+    "subject": "XI Maths · Ex 3.3 — Vectors",
+    "exercise": "XI FB EX3.3",
+    "question": "If u=5i−j+k and v=−15i+3j−3k then",
+    "options": [
+      "u()v",
+      "u⊥v",
+      "u=v",
+      "(u)=(v)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.3 · Q18 — verify answer key"
+  },
+  {
+    "id": 176,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "(b×a) is equal to",
+    "options": [
+      "1",
+      "a^{2}b",
+      "0",
+      "2"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX3.4 · Q1"
+  },
+  {
+    "id": 177,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "The non-zero vectors a, b and c are called coplanar if a. (b×c) is equal to",
+    "options": [
+      "1",
+      "-1",
+      "0",
+      "2"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX3.4 · Q2"
+  },
+  {
+    "id": 178,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "2i.(j×2k) is equal to",
+    "options": [
+      "2",
+      "4",
+      "0",
+      "1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q3"
+  },
+  {
+    "id": 179,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "(b×c) = b. (c×a) is equal",
+    "options": [
+      "a.(b.c)",
+      "c.(a × b)",
+      "a × (b × c)",
+      "(a.b) × c"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q4 — verify answer key"
+  },
+  {
+    "id": 180,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "The value of λ for which the vectors i−2j+3k,−2i+3j−4k and −i+λj+2k are coplanar",
+    "options": [
+      "(1)/(2)",
+      "−(1)/(2)",
+      "2",
+      "-2"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q5 — verify answer key"
+  },
+  {
+    "id": 181,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "The volume of parallelepiped with given coterminal edges 2i+3j−4k, i+2j−3k and 3i+j+k is",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q6 — verify answer key"
+  },
+  {
+    "id": 182,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "The volume of tetrahedron with −2i+7j+k,4i+2j+k and 2j+k is",
+    "options": [
+      "15",
+      "20",
+      "(10)/(3)",
+      "(10)/(3)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q7 — verify answer key"
+  },
+  {
+    "id": 183,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "(v×w)+v.(u×w)+w.(u×v)=",
+    "options": [
+      "1",
+      "0",
+      "u.(v×w)",
+      "3u.(v×w)"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX3.4 · Q8"
+  },
+  {
+    "id": 184,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "The vector in the direction of i+2j−2k and having magnitude 12 is",
+    "options": [
+      "(12)/(7)(i+2j−2k)",
+      "12(i+2j−2k)",
+      "(1)/(3)(i+2j−2k)",
+      "4(i+2j−2k)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q9 — verify answer key"
+  },
+  {
+    "id": 185,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "The position vectors of three vertices of triangle are 2i+j−k,3i−2j+4k and i+4j−3k. The triangle is",
+    "options": [
+      "Isosceles",
+      "Right angled",
+      "Scalene",
+      "Equilateral"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX3.4 · Q10"
+  },
+  {
+    "id": 186,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "Given two vectors i−j and i+2j then the unit vector coplanar with two vectors and perpendicular to first is",
+    "options": [
+      "±(1)/(√(2))(i−j)",
+      "±(1)/(√(5))(2i+j)",
+      "±(1)/(√(2))(i+j)",
+      "±(1)/(√(5))(i+2j)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q11 — verify answer key"
+  },
+  {
+    "id": 187,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "If (a+b)=(a−b) then",
+    "options": [
+      "a=b",
+      "a⋅b=0",
+      "a∥b",
+      "a=−b"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q12 — verify answer key"
+  },
+  {
+    "id": 188,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "If a,b,c are mutually perpendicular unit vectors, the value of (a+b+c) is",
+    "options": [
+      "1",
+      "√(2)",
+      "√(3)",
+      "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX3.4 · Q13"
+  },
+  {
+    "id": 189,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "If a+b+c=0 and",
+    "options": [
+      "=3,",
+      "=5 and",
+      "=7 then angle between a and b is:(A) (π)/(3) (B) (π)/(2) (C) (5π)/(3)",
+      "(π)/(6)"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX3.4 · Q14"
+  },
+  {
+    "id": 190,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "If a=2i+3j−k,b=−i+2j−4k and c=i+j+k, then the value of (a×b).(a×c) is",
+    "options": [
+      "74",
+      "-74",
+      "52",
+      "-52"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q15 — verify answer key"
+  },
+  {
+    "id": 191,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "If (a×b)=4 and (a.b)=2 then",
+    "options": [
+      "^{2}",
+      "^{2} is:(A) 6 (B) 20",
+      "2",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX3.4 · Q16 — verify answer key"
+  },
+  {
+    "id": 192,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "If θ is the angle between two vectors a and b and (a×b)=(a.b), then θ is",
+    "options": [
+      "0",
+      "(π)/(2)",
+      "(π)/(4)",
+      "(π)/(3)"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX3.4 · Q17"
+  },
+  {
+    "id": 193,
+    "subject": "XI Maths · Ex 3.4 — Vectors",
+    "exercise": "XI FB EX3.4",
+    "question": "The value of (a−b b−c c−a) where",
+    "options": [
+      "=1,",
+      "=5,",
+      "=3 is:(A) 0 (B) 1 (C) 6",
+      "15"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX3.4 · Q18"
+  },
+  {
+    "id": 194,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "Sequence is also called",
+    "options": [
+      "Series",
+      "Progression",
+      "Mean",
+      "None of these"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX4.1 · Q1"
+  },
+  {
+    "id": 195,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "A sequence is a function whose domain is the subset of",
+    "options": [
+      "N",
+      "R",
+      "Z",
+      "C"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q2"
+  },
+  {
+    "id": 196,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "Range of a sequence is a subset of",
+    "options": [
+      "N",
+      "R",
+      "C",
+      "Both B and C"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q3 — verify answer key"
+  },
+  {
+    "id": 197,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The next term of the sequence -1, 2, 12, 40, …is",
+    "options": [
+      "110",
+      "112",
+      "76",
+      "88"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q4 — verify answer key"
+  },
+  {
+    "id": 198,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The symbol used to represent the sequence is",
+    "options": [
+      "a_{n}",
+      "{a_{n}}",
+      "a(n)",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q5 — verify answer key"
+  },
+  {
+    "id": 199,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "If a_{n}=((−1))/(n+1) then the 56th term is",
+    "options": [
+      "(−1)/(2)",
+      "(1)/(58)",
+      "−(1)/(58)",
+      "+(1)/(58)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q6 — verify answer key"
+  },
+  {
+    "id": 200,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The general term of the sequence -1, 2, -4, 8, -16, …",
+    "options": [
+      "(−1)^{n}2^{n}",
+      "(−1)^{n}(2^{n−1})",
+      "(−1)^{n+1}2^{n−1}",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q7 — verify answer key"
+  },
+  {
+    "id": 201,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The formula for nth triangular number is",
+    "options": [
+      "T_{n}=(n(n−1))/(2)",
+      "T_{n}=(n(n+1))/(2)",
+      "T_{n}=(n^{2}(n−1))/(2)",
+      "T_{n}=(n^{2}(n+1))/(2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q8 — verify answer key"
+  },
+  {
+    "id": 202,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The sequence 1,(3)/(2),(5)/(4),(7)/(8),… then a_{7}=?",
+    "options": [
+      "(15)/(128)",
+      "(13)/(64)",
+      "(11)/(32)",
+      "(11)/(64)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q9 — verify answer key"
+  },
+  {
+    "id": 203,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The next four terms of the arithmetic sequence 33, 39, 45, …",
+    "options": [
+      "51, 57, 63, 69",
+      "51, 63, 57, 69",
+      "33, 39, 45, 51",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q10"
+  },
+  {
+    "id": 204,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "A sequence in which every term after the first can be obtained by adding a fixed number in the preceding term is called",
+    "options": [
+      "Arithmetic progression",
+      "Geometric progression",
+      "Harmonic progression",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q11"
+  },
+  {
+    "id": 205,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The general term a_{n} of an A.P is",
+    "options": [
+      "a_{1}+nd",
+      "a_{1}+(n+1)d",
+      "a_{1}+(n−1)d",
+      "a_{1}+d"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q12 — verify answer key"
+  },
+  {
+    "id": 206,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The sequence 2, 5, 8, 11, …then a_{15}=?",
+    "options": [
+      "41",
+      "44",
+      "47",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q13"
+  },
+  {
+    "id": 207,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "If a, A, b are in A.P then 2A is",
+    "options": [
+      "a−b",
+      "(a+b)/(2)",
+      "a+b",
+      "b−a"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q14"
+  },
+  {
+    "id": 208,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "A number A is said to be the A.M between two numbers a and b if a, A, b are in",
+    "options": [
+      "Real sequence",
+      "Finite sequence",
+      "Geometric sequence",
+      "Arithmetic sequence"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX4.1 · Q15"
+  },
+  {
+    "id": 209,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The sum of K A.Ms between 4 and 16 is",
+    "options": [
+      "30K",
+      "10K",
+      "10n",
+      "20n"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX4.1 · Q16"
+  },
+  {
+    "id": 210,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "The sequence 0.07, 0.12, 0.17, …then a_{11}=?",
+    "options": [
+      "0.54",
+      "0.57",
+      "(57)/(100)",
+      "Both B and C"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q17 — verify answer key"
+  },
+  {
+    "id": 211,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "Which term of the sequence -6, -2, 2, …is 70?",
+    "options": [
+      "19^{th}",
+      "20^{th}",
+      "21^{th}",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q18 — verify answer key"
+  },
+  {
+    "id": 212,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "Arithmetic mean between 3+3√(2) and 7−3√(2) is",
+    "options": [
+      "√(2)",
+      "√(5)",
+      "5",
+      "10√(5)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q19 — verify answer key"
+  },
+  {
+    "id": 213,
+    "subject": "XI Maths · Ex 4.1 — Sequences & Series",
+    "exercise": "XI FB EX4.1",
+    "question": "A.M between a_{n−1} and a_{n+1} is",
+    "options": [
+      "(a_{n−1}+a_{n+1})/(2)",
+      "a_{n−1}+a_{n+1}",
+      "(a_{n−1}−a_{n+1})/(2)",
+      "(a+b)/(2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.1 · Q20 — verify answer key"
+  },
+  {
+    "id": 214,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "The sum of n indicated number of terms in the sequence is called",
+    "options": [
+      "Finite sequence",
+      "Infinite sequence",
+      "Series",
+      "Mean"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX4.2 · Q1"
+  },
+  {
+    "id": 215,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "7th partial sum of a sequence (n^{2}) equals to",
+    "options": [
+      "49",
+      "130",
+      "140",
+      "160"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.2 · Q2 — verify answer key"
+  },
+  {
+    "id": 216,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "Sum of n terms of an A.P is",
+    "options": [
+      "(n)/(2)(2a_{1}+(n−1)d)",
+      "(a_{1}(1−r^{n}))/(1−r)",
+      "(a_{1})/(1−r)",
+      "(1)/(2)(2a_{1}+(n−1)d)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.2 · Q3 — verify answer key"
+  },
+  {
+    "id": 217,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "The sum of the series -3 + (-1) + 1 + 3 + 5 + .......... to n is",
+    "options": [
+      "290",
+      "190",
+      "192",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.2 · Q4 — verify answer key"
+  },
+  {
+    "id": 218,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "The sum of first 100 positive integers",
+    "options": [
+      "5050",
+      "5051",
+      "5052",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.2 · Q5"
+  },
+  {
+    "id": 219,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "A family saves money in an arithmetic sequence Rs. 6000 in first year, 70,000 in 2nd year and so on for 20 years. How much do they save in all?",
+    "options": [
+      "122800",
+      "1228000",
+      "12280000",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.2 · Q6 — verify answer key"
+  },
+  {
+    "id": 220,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "How many multiples of 4 between 14 and 523 is",
+    "options": [
+      "126",
+      "127",
+      "128",
+      "227"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.2 · Q7 — verify answer key"
+  },
+  {
+    "id": 221,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "The sum of three numbers in A.P is 24 and their product 440 then the numbers are",
+    "options": [
+      "5, 9, 10",
+      "4, 9, 11",
+      "5, 8, 11",
+      "4, 5, 15"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX4.2 · Q8"
+  },
+  {
+    "id": 222,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "A man repays his loan of Rs. 1120 by paying Rs. 15 in the first installment and then increase the payment by Rs. 10 every month. How long will take to clear his loan?",
+    "options": [
+      "14",
+      "15",
+      "13",
+      "12"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.2 · Q9 — verify answer key"
+  },
+  {
+    "id": 223,
+    "subject": "XI Maths · Ex 4.2 — Sequences & Series",
+    "exercise": "XI FB EX4.2",
+    "question": "If a_{1}=17, a_{n}=101 and S_{n}=472 then n = ?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.2 · Q10 — verify answer key"
+  },
+  {
+    "id": 224,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "A sequence of number is called H.P if the reciprocal of its terms are in",
+    "options": [
+      "A.P",
+      "G.P",
+      "H.P",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q1"
+  },
+  {
+    "id": 225,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "Nth term of H.P is",
+    "options": [
+      "(1)/(a+d)",
+      "(1)/(a_{1}+nd)",
+      "(1)/(a_{1}+(n−1)d)",
+      "a_{1}+(n−1)d"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q2 — verify answer key"
+  },
+  {
+    "id": 226,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "No term of the harmonic sequence can be",
+    "options": [
+      "1",
+      "-1",
+      "0",
+      "2"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q3"
+  },
+  {
+    "id": 227,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "The harmonic mean between two numbers a and b is",
+    "options": [
+      "(a+b)/(2ab)",
+      "(a−b)/(2ab)",
+      "(2ab)/(a−b)",
+      "(2ab)/(a+b)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q4"
+  },
+  {
+    "id": 228,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "If (1)/(2),(1)/(5),(1)/(8),... are in H.P then a_{6} in H.P = ?",
+    "options": [
+      "(1)/(23)",
+      "(1)/(25)",
+      "(1)/(26)",
+      "(1)/(23)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q5 — verify answer key"
+  },
+  {
+    "id": 229,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "The nth harmonic mean between a and b is given by",
+    "options": [
+      "((n+1)ab)/(na+b)",
+      "((n+1)a+b)/(na+b)",
+      "(ab)/(na+b)",
+      "((n+1))/(na+b)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q6 — verify answer key"
+  },
+  {
+    "id": 230,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "If A > G > H and a, b are any two distinct positive real numbers then which is true",
+    "options": [
+      "G=−√(ab)",
+      "G=√(ab)",
+      "G=ab",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q7 — verify answer key"
+  },
+  {
+    "id": 231,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "The H.M between (2)/(3) and (4)/(7) is",
+    "options": [
+      "(13)/(8)",
+      "(8)/(13)",
+      "(21)/(5)",
+      "(21)/(10)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q8 — verify answer key"
+  },
+  {
+    "id": 232,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "Which of the following is true?",
+    "options": [
+      "AG=H^{2}",
+      "AH=G^{2}",
+      "A^{2}=GH",
+      "AH=G^{2}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q9 — verify answer key"
+  },
+  {
+    "id": 233,
+    "subject": "XI Maths · Ex 4.5 TO EX4.6 — Sequences & Series",
+    "exercise": "XI FB EX4.5 TO EX4.6",
+    "question": "For any two positive distinct real numbers, then which of the following must be true?",
+    "options": [
+      "A>G>H",
+      "H>A>G",
+      "G>A>H",
+      "G>H>A"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.5 TO EX4.6 · Q10 — verify answer key"
+  },
+  {
+    "id": 234,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "The Greek letter ∑ is used to denote",
+    "options": [
+      "Product",
+      "Difference",
+      "Sum",
+      "Division"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q1"
+  },
+  {
+    "id": 235,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "1+3+5+… to n terms is equivalent to",
+    "options": [
+      "∑_{K=1}^{n}(2K+1)",
+      "∑_{K=1}^{n}(2K−1)",
+      "∑(2K±1)",
+      "∑_{K=1}^{n}(2K−1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q2 — verify answer key"
+  },
+  {
+    "id": 236,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "∑_{K=1}^{4}(2+5)=",
+    "options": [
+      "4",
+      "55",
+      "35",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q3 — verify answer key"
+  },
+  {
+    "id": 237,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "The sum of first n natural numbers is denoted by",
+    "options": [
+      "∑_{K=1}^{n}K",
+      "∑_{K^{2}}^{K=1}​",
+      "∑K^{3}",
+      "∑_{K=1}^{n}K^{4}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q4 — verify answer key"
+  },
+  {
+    "id": 238,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "∑_{K=1}^{n}K^{2}=?",
+    "options": [
+      "(n(n−1))/(2)",
+      "(n(n+1))/(2)",
+      "(n(n+1)(2n+1))/(6)",
+      "(n(n+1)^{2})"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q5 — verify answer key"
+  },
+  {
+    "id": 239,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "∑_{K=1}^{n}(K^{m}−(K−1)^{m})=?",
+    "options": [
+      "m^{n}",
+      "n^{m}",
+      "m^{n}",
+      "m^{2}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q6 — verify answer key"
+  },
+  {
+    "id": 240,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "∑_{K=1}^{n}K^{3}=?",
+    "options": [
+      "(n(n−1))/(2)",
+      "(n(n+1))/(2)",
+      "(n(n+1)(2n+1))/(6)",
+      "((n(n+1)^{2}))/(2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q7 — verify answer key"
+  },
+  {
+    "id": 241,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "Sum to infinity of arithmetic geometric series",
+    "options": [
+      "S_{∞}=(a_{1})/(1−r)",
+      "S_{∞}=(a_{1})/(1−r)−(dr)/((1−r)^{2})",
+      "S=(a_{1})/(1−r′)+(a_{1})/((1−r)^{2})",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q8 — verify answer key"
+  },
+  {
+    "id": 242,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "Sum to n terms 1×4+2×7+3×10+… is",
+    "options": [
+      "n(n+1)^{2}",
+      "n(n+1)",
+      "(n(n+1)(2n+1))/(6)",
+      "(n(n−1)(n+1))/(6)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q9 — verify answer key"
+  },
+  {
+    "id": 243,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "Sum to n terms (1)/(1×4)+(1)/(4×7)+(1)/(7×10)+… is",
+    "options": [
+      "(n)/(3n+1)",
+      "(3n)/(n+1)",
+      "(2n)/(3n+1)",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q10 — verify answer key"
+  },
+  {
+    "id": 244,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "How many terms of the sequence 18, 15, 12,... are needed to give a sum of 60?",
+    "options": [
+      "upto 7th",
+      "upto 10th",
+      "upto 6th",
+      "upto 5th"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q11"
+  },
+  {
+    "id": 245,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "Find the 20th term from the end of A.P 2, 7, 12, 17, ........., 12",
+    "options": [
+      "222",
+      "132",
+      "127",
+      "122"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q12 — verify answer key"
+  },
+  {
+    "id": 246,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "In the sequence 1, 2, 2, 3, 3, 3, 4, 4, 4, 4,..... when n consecutive terms have the value n, the 22nd term is",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q13"
+  },
+  {
+    "id": 247,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "If a, b, c in A.P then 3^{a},3^{b},3^{c} are in",
+    "options": [
+      "G.P",
+      "H.P",
+      "A.P",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q14 — verify answer key"
+  },
+  {
+    "id": 248,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "Predict the general term for the geometric sequence",
+    "options": [
+      "(4)/(3^{n−2})",
+      "(4)/(3^{n−1})",
+      "(4)/(3^{n})",
+      "(4)/(3^{n+1})"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q15 — verify answer key"
+  },
+  {
+    "id": 249,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "0+0.1+0.01+0.001+0.0001+… sum is",
+    "options": [
+      "9",
+      "(19)/(10)",
+      "(1)/(9)",
+      "(9)/(10)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q16 — verify answer key"
+  },
+  {
+    "id": 250,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "Find first term of the geometric series, when S_{n}=30,n=4,r=−2",
+    "options": [
+      "6",
+      "-6",
+      "8",
+      "-8"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q17 — verify answer key"
+  },
+  {
+    "id": 251,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "The arithmetic means in the sequence -7, __ , __ , __ , 5 are",
+    "options": [
+      "-3, 1",
+      "3, 1",
+      "-4, 2",
+      "3, -1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q18 — verify answer key"
+  },
+  {
+    "id": 252,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "Geometric mean between 1 and (1)/(3) is",
+    "options": [
+      "3",
+      "(1)/(3)",
+      "√(3)",
+      "(1)/(√(3))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q19 — verify answer key"
+  },
+  {
+    "id": 253,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "∑_{K=1}^{3}K^{2} is equal to",
+    "options": [
+      "14",
+      "13",
+      "5",
+      "30"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q20 — verify answer key"
+  },
+  {
+    "id": 254,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "The sigma notation for the sum -2 + 4 - 6 + 8 is",
+    "options": [
+      "∑_{K=1}^{3}(−1)^{k}(K+1)",
+      "∑_{K=1}^{4}(−1)^{k}2K",
+      "∑_{K=1}^{4}(−1)^{k}2K",
+      "∑_{K=2}^{5}(−1)^{k}2K"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q21 — verify answer key"
+  },
+  {
+    "id": 255,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "∑_{K=1}^{5}5 is equal to",
+    "options": [
+      "n",
+      "5n",
+      "5",
+      "5^{n}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q22 — verify answer key"
+  },
+  {
+    "id": 256,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "The general term of the given series (1)/(1.3)+(1)/(2.5)+(1)/(3.7)+… is",
+    "options": [
+      "(1)/(n(2n+1))",
+      "(1)/(n(n+2))",
+      "(1)/((n+1)(2n−1))",
+      "(1)/((n−1)(2n+1))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q23 — verify answer key"
+  },
+  {
+    "id": 257,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "In (1)/(1.7)+(1)/(7.10)+(1)/(10.13)+…, then n^{th} term is",
+    "options": [
+      "(1)/((3n−1)(3n+1))",
+      "(1)/((3n−2)(3n+4))",
+      "(1)/((3n+1)(3n+4))",
+      "(1)/((n+2)(n+6))"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q24 — verify answer key"
+  },
+  {
+    "id": 258,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "The sum ∑_{r=2}^{∞}(1)/(2^{r−1}) represents",
+    "options": [
+      "1",
+      "(3)/(4)",
+      "(4)/(3)",
+      "(1)/(4)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q25 — verify answer key"
+  },
+  {
+    "id": 259,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "Sum of the series 1+3+5+7+9+11+… is",
+    "options": [
+      "n^{10}",
+      "n^{2}",
+      "n(n+1)",
+      "n−1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q26 — verify answer key"
+  },
+  {
+    "id": 260,
+    "subject": "XI Maths · Ex 4.7 TO EX4.9 — Sequences & Series",
+    "exercise": "XI FB EX4.7 TO EX4.9",
+    "question": "∑_{K=1}^{3}3 is equal to",
+    "options": [
+      "10",
+      "10^{3}",
+      "300",
+      "30"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX4.7 TO EX4.9 · Q27 — verify answer key"
+  },
+  {
+    "id": 261,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "The first Muslim mathematician who introduced Algebra was:",
+    "options": [
+      "Muhammad Bin Musa",
+      "Jabir Ibn Hayyan",
+      "Ibn Al Haytham",
+      "Bu Ali Sina"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q1"
+  },
+  {
+    "id": 262,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "Use of letters to represent an unknown quantity was introduced by:",
+    "options": [
+      "Muhammad Bin Musa",
+      "Rene Descartes",
+      "Euler",
+      "James Sylvester"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX5.1 · Q2"
+  },
+  {
+    "id": 263,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "Algebraic expressions are of:",
+    "options": [
+      "One kind",
+      "Two kinds",
+      "Three kinds",
+      "Four kinds"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX5.1 · Q3"
+  },
+  {
+    "id": 264,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "What should be added to 3pq+5p^{2}q^{2}+p^{3} to get p^{3}+2p^{2}q^{2}+4pq?",
+    "options": [
+      "p^{2}q^{2}−pq",
+      "2p^{2}q^{2}+pq",
+      "−3p^{2}q^{2}+pq",
+      "5pq+p^{2}q^{2}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q4 — verify answer key"
+  },
+  {
+    "id": 265,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "By simplifying the algebraic expression 2x^{2}(x+2)−3x(x^{2}−3)−5x(x+5), what are the coefficients?",
+    "options": [
+      "-1, -1, -16",
+      "-16, -4, -1",
+      "5, 3, 2",
+      "2, 3, -1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q5 — verify answer key"
+  },
+  {
+    "id": 266,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "Which of the following is a polynomial:",
+    "options": [
+      "(x^{2})/(2)",
+      "√(2x)−1",
+      "x^{2}+(3x)/(x)",
+      "(x)/(x+1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q6 — verify answer key"
+  },
+  {
+    "id": 267,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "Zero polynomial has degree:",
+    "options": [
+      "0",
+      "1",
+      "Any natural number",
+      "No degree"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX5.1 · Q7"
+  },
+  {
+    "id": 268,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "If P(x) = x^{2}−2√(2)x+1 then P(2√(2)) is equal to:",
+    "options": [
+      "0",
+      "1",
+      "4√(2)",
+      "8√(2)+1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q8 — verify answer key"
+  },
+  {
+    "id": 269,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "If P(x) = x + 3 then P(x) + P(-x) is equal to:",
+    "options": [
+      "3",
+      "2x",
+      "0",
+      "6"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX5.1 · Q9"
+  },
+  {
+    "id": 270,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "The degree of the constant polynomial is:",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Not defined"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q10"
+  },
+  {
+    "id": 271,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "Which of the following is a linear polynomial?",
+    "options": [
+      "x+(2)/(x)+3",
+      "√(x)−1",
+      "-7x",
+      "Both B and C"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX5.1 · Q11"
+  },
+  {
+    "id": 272,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "-9xyz is a ________ polynomial.",
+    "options": [
+      "Cubic",
+      "Linear",
+      "Constant",
+      "Zero polynomial"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q12 — verify answer key"
+  },
+  {
+    "id": 273,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "Ax + 2xy + 3 is a ________ polynomial.",
+    "options": [
+      "Linear",
+      "Cubic",
+      "Constant",
+      "Quadratic"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q13 — verify answer key"
+  },
+  {
+    "id": 274,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "3 is a polynomial of degree:",
+    "options": [
+      "1",
+      "3",
+      "Not defined",
+      "0"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX5.1 · Q14"
+  },
+  {
+    "id": 275,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "The restrictions on the rational expression (x^{2}+x)/(2(2x−1)) are:",
+    "options": [
+      "x≠(1)/(2)",
+      "x=−(1)/(2)",
+      "x=(1)/(2)",
+      "x=−(1)/(2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q15"
+  },
+  {
+    "id": 276,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "Which of the following is a rational expression:",
+    "options": [
+      "(1)/(2)",
+      "(x)/(2)",
+      "(3)/(4x^{2})",
+      "Both A and C"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q16 — verify answer key"
+  },
+  {
+    "id": 277,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "What should be subtracted to the polynomial x^{2}−16x+30, so that x - 15 is the factor of the resulting polynomial?",
+    "options": [
+      "30",
+      "-15",
+      "15",
+      "16"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q17 — verify answer key"
+  },
+  {
+    "id": 278,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "If the polynomial x^{3}+9x^{2}+23x+15 is divided by x + 1, then the depressed equation is:",
+    "options": [
+      "x^{2}−8x+15=0",
+      "x^{2}+8x−15=0",
+      "x^{2}+8x+15=0",
+      "x^{2}−8x−15=0"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q18 — verify answer key"
+  },
+  {
+    "id": 279,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "If 3x^{5}−5x^{3}+2nx+3, ∀n∈Z is divided by x - 1, then remainder is:",
+    "options": [
+      "Odd number",
+      "Even number",
+      "Rational number",
+      "Real number"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q19 — verify answer key"
+  },
+  {
+    "id": 280,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "If a polynomial f(x) is divided by a linear divisor (x - a), then the remainder is:",
+    "options": [
+      "f(-a)",
+      "f(a)",
+      "a",
+      "f(0)"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX5.1 · Q20"
+  },
+  {
+    "id": 281,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "When P(x) is divided by g(x) if P(x)=x^{3}−3x^{2}+4x+50, g(x)=x−3 then the remainder is:",
+    "options": [
+      "0",
+      "62",
+      "(3)/(2)",
+      "-4"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX5.1 · Q21"
+  },
+  {
+    "id": 282,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "For what value of p the remainder is 4 when 3x^{4}−4px^{2}+5x−p is divided by x + 2:",
+    "options": [
+      "4",
+      "-2",
+      "2",
+      "-4"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q22 — verify answer key"
+  },
+  {
+    "id": 283,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "For what value of k, x + 4 is a factor of the polynomial x^{2}−x−(2k−2)?",
+    "options": [
+      "7",
+      "22",
+      "11",
+      "44"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q23 — verify answer key"
+  },
+  {
+    "id": 284,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "If x^{2}−3x+2 is a factor of the polynomial f(x), then f(2) = ?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q24"
+  },
+  {
+    "id": 285,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "2x + 7 is a factor of 2x^{3}+5x^{2}−11x−14, then factorize form of the expression will be:",
+    "options": [
+      "Zeros of zero polynomial are:",
+      "0",
+      "1",
+      "All Real numbers"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q25 — verify answer key"
+  },
+  {
+    "id": 286,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "Zero of the polynomial f(x) = 2x^{2}+7x−4 is:",
+    "options": [
+      "2",
+      "(1)/(2)",
+      "−(1)/(4)",
+      "-2"
+    ],
+    "correctIndex": 3,
+    "explanation": "From XI FB EX5.1 · Q26"
+  },
+  {
+    "id": 287,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "If one of the zeros of the quadratic polynomial (k-1)x^{2}+kx+1 is -3 then the value of k is:",
+    "options": [
+      "−(4)/(3)",
+      "(2)/(3)",
+      "(4)/(3)",
+      "(2)/(3)"
+    ],
+    "correctIndex": 1,
+    "explanation": "From XI FB EX5.1 · Q27"
+  },
+  {
+    "id": 288,
+    "subject": "XI Maths · Ex 5.1 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.1",
+    "question": "If 2, 5, -2 are zeros of a polynomial then polynomial is:",
+    "options": [
+      "x^{3}−5x−6x",
+      "x^{3}−5x^{2}+2x−2",
+      "x^{3}−5x^{2}−4x+20",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.1 · Q28 — verify answer key"
+  },
+  {
+    "id": 289,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "If (2y+1) and (y−2) are two linear factors of the polynomial 2y^{3}+y^{2}−8y−4 then the third factor is",
+    "options": [
+      "y−1",
+      "y+2",
+      "2y−1",
+      "y+1"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q1 — verify answer key"
+  },
+  {
+    "id": 290,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "Factorize form of the polynomial t^{3}+t^{2}+3t−5 is",
+    "options": [
+      "(t−1)(t+2)(2t−1)",
+      "(t−1)(t^{2}+2t+5)",
+      "(t+3)(t−3)(t+2)",
+      "(2t−1)(t−5)(t−2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q2 — verify answer key"
+  },
+  {
+    "id": 291,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "If 1 is one zeros of the polynomial x^{3}+3x^{2}−x−3 then factorize form of the polynomial will be",
+    "options": [
+      "(x−1)(x+2)(x+3)",
+      "(x−1)(x−3)(2x−1)",
+      "(x−1)(x^{2}+4x+3)",
+      "(x+1)(x^{2}−2x+3)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q3 — verify answer key"
+  },
+  {
+    "id": 292,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "If f(x)=x^{3}−2x^{2}−5x+6 and f(1)=0 then other zeros of f(x) are",
+    "options": [
+      "-2, -4",
+      "-3, -2",
+      "3, -2",
+      "2, -4"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q4 — verify answer key"
+  },
+  {
+    "id": 293,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "The number of tickets sold during the high school football season can be defined by t(x)=x^{3}−12x^{2}+48x+74 then number of tickets sold during the 12^{th} game of the school football season",
+    "options": [
+      "750",
+      "650",
+      "820",
+      "900"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q5 — verify answer key"
+  },
+  {
+    "id": 294,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "The volume of a cuboid is 105x^{7} with length and height as 5x and 7x^{4} respectively, then breadth is",
+    "options": [
+      "3x",
+      "3x^{2}",
+      "21x",
+      "21x^{2}"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q6 — verify answer key"
+  },
+  {
+    "id": 295,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "Factors of −2−x+x^{2} are",
+    "options": [
+      "(x−2)(x−1)",
+      "(x+1)(x+2)",
+      "(x+2)(x−1)",
+      "(x+1)(x−2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q7 — verify answer key"
+  },
+  {
+    "id": 296,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "Divide 9y^{2}+9y−10 by 3y−2 then remainder is",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q8"
+  },
+  {
+    "id": 297,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "(x^{2}−x−9)/(x−3)=x+2+(?)/(x−3)",
+    "options": [
+      "-27",
+      "-3",
+      "(3)/(x−3)",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q9 — verify answer key"
+  },
+  {
+    "id": 298,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "If 3x^{3}−2x^{2}+5 is divided by x+1 then x+1 will be its",
+    "options": [
+      "Divisor as well as factor",
+      "Dividend",
+      "Quotient",
+      "Remainder"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q10 — verify answer key"
+  },
+  {
+    "id": 299,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "If 2 is a zero of the polynomial x^{3}+5x^{2}−4x+k, the then value of k will be",
+    "options": [
+      "-4",
+      "-20",
+      "20",
+      "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q11 — verify answer key"
+  },
+  {
+    "id": 300,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "If x - b is the factor of q(x) then q(b) is",
+    "options": [
+      "Factor",
+      "Divisor",
+      "Remainder",
+      "Dividend"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q12"
+  },
+  {
+    "id": 301,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "If the expression 2x^{3}+3px^{2}−4x has a remainder of 4 when divided by x + 2, then p =",
+    "options": [
+      "-2",
+      "1",
+      "-1",
+      "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q13 — verify answer key"
+  },
+  {
+    "id": 302,
+    "subject": "XI Maths · Ex 5.2 TO 5.3 — Algebra / Polynomials",
+    "exercise": "XI FB EX5.2 TO 5.3",
+    "question": "If f(x) is divided by x - 2 then remainder is 12 what is f(2)?",
+    "options": [
+      "-12",
+      "f(-2)",
+      "12",
+      "Zero"
+    ],
+    "correctIndex": 2,
+    "explanation": "From XI FB EX5.2 TO 5.3 · Q14"
+  }
+];
+
+window.QUIZ_META = QUIZ_META;
+window.QUIZ_QUESTIONS = QUIZ_QUESTIONS;

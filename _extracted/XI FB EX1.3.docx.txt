@@ -1,0 +1,15 @@
+1. A system of equations is consistent of it has ____________ solution. (A) At least one (B) Only one (C) No solution (D) None of these
+2. A system of equations which has no solution is called: (A) Consistent (B) Inconsistent (C) Trivial (D) Non-trivial
+3. For what value of w and z, the simultaneous. System of linear equations satisfy: (1-i)z+(1+i)w=3 and 2z-(2+5i)w=2+3i: (A) w=(2-7i)/(53);z=(145+155i)/(106) (B) w=(2-7i)/(53);z=(145+155i)/(53) (C) w=(2+7i)/(53);z=(145-155i)/(106) (D) w=(7+2i)/(53);z=(145-155i)/(106)
+4. What should be added to the equation 2z^{2}-6z-9=0 to complete the square: (A) ((-3)/(2))^{2} (B) ((1)/(2))^{2} (C) ((-1)/(2))^{2} (D) ((5)/(2))^{2}
+5. Factors of 2z^{3}+9z^{2}-11z-30 are: (A) (z-2)(z+5)(z-5) (B) (z-2)(z+2)(z+5) (C) (z-2)(z+5)(2z+3) (D) (z-3)(z+5)(2z+3)
+6. Solution of the quadratic equation z^{2}-9z+11=0 are: (A) ((9±√(37))/(2)) (B) ((9±√(37))/(4)) (C) ((4±√(41))/(2)) (D) None of these
+7. The depressed equation of the polynomial P(z)=z^{3}+2z^{2}-5z-6 is: (A) z^{2}+z-6 (B) z^{2}-z-6 (C) z^{2}-z+6 (D) z^{2}+z+6
+8. Factors of P(z)=z^{4}-(3)/(25) are: (A) (z+(√(3))/(5))(z-(√(3))/(5)) (B) (z+(√(3))/(5))(z-(3)/(5)) (C) (z+(3)/(5))(z-(√(3))/(5)) (D) (z+(3)/(5))(z-(3)/(5))
+Im((x_{1}+iy_{1})/(x_{2}+iy_{2}))=a)(x_{1}y_{2}-x_{2}y_{1})/(x_{1}^{2}+y_{1}^{2})B)(x_{1}y_{2}-x_{2}y_{1})/(x_{1}^{2}+y_{1}^{2})C)(x_{1}y_{1}-x_{2}y_{2})/(x_{2}^{2}+y_{2}^{2})D)(x_{1}y_{2}-x_{2}y_{1})/(x_{2}^{2}+y_{2}^{2})
+Real part of z=((12+5i)/(3+2i))^{2} is:
+(-2035)/(169)
+(2035)/(169)
+(2049)/(169)
+(2049)/(169)
+For any complex number z, Re(z) =A) Im(iz)B)-Im(iz)C)-Im(z)D) Im(z)

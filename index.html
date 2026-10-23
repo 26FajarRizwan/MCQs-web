@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fazaia Inter College — XI Mathematics MCQ practice portal with instant feedback. Aspiring for Excellence."
+    />
+    <title>Fazaia Inter College | XI Mathematics MCQs</title>
+
+    <!-- Brand fonts: display serif + clean sans (avoid generic Inter/Roboto stacks) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: { DEFAULT: "#0b1c33", mid: "#132a4a", soft: "#1a3355" },
+              sky: { DEFAULT: "#00aeef", deep: "#008fc7", soft: "#e6f7fd" },
+              gold: { DEFAULT: "#c9a227", soft: "#e0c56a", muted: "#a8861c" },
+              flame: { DEFAULT: "#e53935", soft: "#ffebee" },
+              mist: "#f0f5fa",
+            },
+            fontFamily: {
+              display: ['"Libre Baskerville"', "Georgia", "serif"],
+              sans: ['"Source Sans 3"', "system-ui", "sans-serif"],
+            },
+            boxShadow: {
+              brand: "0 12px 40px rgba(11, 28, 51, 0.12)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Confetti celebration on correct answers -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  </head>
+  <body class="font-sans antialiased text-slate-800">
+    <!-- ========== TOP UTILITY BAR ========== -->
+    <div class="border-b border-slate-100 bg-white">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-2.5 sm:px-6 lg:px-8">
+        <a href="#home" data-nav="home" class="flex items-center gap-3 group">
+          <img
+            src="assets/fazaia-logo.jpg"
+            alt="Fazaia Schools & Colleges logo"
+            class="h-12 w-12 rounded-full object-cover ring-2 ring-gold/40 sm:h-14 sm:w-14"
+            width="56"
+            height="56"
+          />
+          <span class="leading-tight">
+            <span class="block font-display text-lg font-bold tracking-tight text-navy group-hover:text-sky-deep sm:text-xl">
+              Fazaia Inter College
+            </span>
+            <span class="block text-xs italic text-slate-500 sm:text-sm">Aspiring for Excellence</span>
+          </span>
+        </a>
+
+        <div class="flex flex-1 flex-wrap items-center justify-end gap-x-5 gap-y-2">
+          <nav class="hidden items-center gap-4 text-sm text-slate-600 md:flex" aria-label="Utility">
+            <a href="#setup" data-nav="setup" class="hover:text-sky-deep transition">Maths Portal</a>
+            <a href="#setup" data-start-quiz class="hover:text-sky-deep transition">Practice MCQs</a>
+            <a href="#about" data-nav="about" class="hover:text-sky-deep transition">E-learning</a>
+            <a href="#about" data-nav="about" class="hover:text-sky-deep transition">About</a>
+          </nav>
+
+          <form id="site-search-form" class="hidden sm:block" role="search">
+            <label class="sr-only" for="site-search">Search</label>
+            <input
+              id="site-search"
+              name="q"
+              type="search"
+              placeholder="Search…"
+              class="w-40 rounded-md border-0 bg-slate-100 px-3 py-1.5 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky lg:w-52"
+            />
+          </form>
+
+          <button
+            type="button"
+            id="btn-menu-open"
+            class="inline-flex items-center justify-center rounded-md p-2 text-navy hover:bg-mist lg:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PRIMARY NAV ========== -->
+    <header class="sticky top-0 z-40 bg-navy shadow-md">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <nav class="hidden items-center gap-1 lg:flex" aria-label="Primary">
+          <a href="#home" data-nav="home" class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">Home</a>
+          <a href="#about" data-nav="about" class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">About</a>
+          <a href="#setup" data-start-quiz class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">XI Mathematics</a>
+          <a href="#setup" data-start-quiz class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">Complex Numbers</a>
+          <a href="#setup" data-start-quiz class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">Matrices</a>
+          <a href="#setup" data-start-quiz class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">Vectors</a>
+          <a href="#setup" data-start-quiz class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">Sequences</a>
+          <a href="#setup" data-start-quiz class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">Algebra</a>
+        </nav>
+
+        <a
+          href="#setup"
+          data-start-quiz
+          class="my-2 ml-auto inline-flex shrink-0 items-center rounded-md bg-gold px-4 py-2 text-sm font-bold text-navy transition hover:bg-gold-soft animate-pulse-ring"
+        >
+          Start Maths Quiz
+        </a>
+      </div>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-backdrop" class="mobile-backdrop fixed inset-0 z-50 bg-navy/50 lg:hidden" aria-hidden="true"></div>
+    <aside
+      id="mobile-drawer"
+      class="mobile-drawer fixed inset-y-0 right-0 z-50 flex w-[min(100%,20rem)] flex-col bg-white shadow-2xl lg:hidden"
+      aria-label="Mobile navigation"
+    >
+      <div class="flex items-center justify-between border-b border-slate-100 px-4 py-4">
+        <span class="font-display font-bold text-navy">Menu</span>
+        <button type="button" id="btn-menu-close" class="rounded-md p-2 text-slate-600 hover:bg-mist" aria-label="Close menu">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-1 p-4 text-navy">
+        <a href="#home" data-nav="home" class="rounded-md px-3 py-2.5 font-semibold hover:bg-mist">Home</a>
+        <a href="#about" data-nav="about" class="rounded-md px-3 py-2.5 font-semibold hover:bg-mist">About</a>
+        <a href="#setup" data-start-quiz class="rounded-md px-3 py-2.5 font-semibold hover:bg-mist">XI Mathematics Quiz</a>
+        <a href="#setup" data-start-quiz class="mt-3 rounded-md bg-gold px-3 py-3 text-center font-bold text-navy">Start Maths Quiz</a>
+      </nav>
+    </aside>
+
+    <main>
+      <!-- ========== HOME VIEW ========== -->
+      <section data-view="home" class="view-panel is-visible" aria-label="Home">
+        <!-- Hero -->
+        <div class="relative min-h-[min(88vh,42rem)] overflow-hidden bg-campus-mesh">
+          <!-- Decorative slide layers (atmospheric; no external campus photos required) -->
+          <div class="hero-slide is-active absolute inset-0" aria-hidden="true">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,rgba(0,174,239,0.25),transparent_55%)]"></div>
+            <div class="absolute -right-20 top-10 h-72 w-72 rounded-full border border-gold/20"></div>
+            <div class="absolute right-24 bottom-16 h-40 w-40 rounded-full border border-sky/30"></div>
+          </div>
+          <div class="hero-slide absolute inset-0" aria-hidden="true">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_60%,rgba(201,162,39,0.2),transparent_50%)]"></div>
+          </div>
+          <div class="hero-slide absolute inset-0" aria-hidden="true">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_30%,rgba(229,57,53,0.12),transparent_45%)]"></div>
+          </div>
+
+          <div class="hero-overlay absolute inset-0"></div>
+
+          <div class="relative z-10 mx-auto flex min-h-[min(88vh,42rem)] max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 lg:px-8">
+            <div class="max-w-xl">
+              <p class="animate-fade-up text-sm font-semibold uppercase tracking-[0.25em] text-sky">
+                Fazaia Inter College · Mathematics
+              </p>
+              <h1 class="animate-fade-up-delay-1 font-display mt-4 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[3.25rem]">
+                XI Maths MCQs.<br />Master every exercise.
+              </h1>
+              <p class="animate-fade-up-delay-2 mt-5 max-w-md text-base leading-relaxed text-white/80 sm:text-lg">
+                <span id="bank-count">290+</span> Class XI mathematics questions from Exercises 1.1–5.3 — complex numbers, matrices, vectors, sequences &amp; algebra — with instant feedback.
+              </p>
+              <div class="animate-fade-up-delay-2 mt-8 flex flex-wrap gap-3">
+                <a
+                  href="#setup"
+                  data-start-quiz
+                  class="inline-flex items-center rounded-md bg-gold px-6 py-3 text-sm font-bold text-navy transition hover:bg-gold-soft"
+                >
+                  Start Maths Practice →
+                </a>
+                <a
+                  href="#about"
+                  data-nav="about"
+                  class="inline-flex items-center rounded-md border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/10"
+                >
+                  About the Portal
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider controls -->
+          <div class="absolute bottom-8 right-6 z-10 flex flex-col items-end gap-3 sm:right-10">
+            <span id="hero-counter" class="font-display text-sm text-white/80">01/03</span>
+            <div class="flex flex-col gap-2" role="tablist" aria-label="Hero slides">
+              <button type="button" data-hero-dot="0" class="h-2.5 w-2.5 rounded-full bg-gold" aria-label="Slide 1" aria-selected="true"></button>
+              <button type="button" data-hero-dot="1" class="h-2.5 w-2.5 rounded-full bg-white/40" aria-label="Slide 2" aria-selected="false"></button>
+              <button type="button" data-hero-dot="2" class="h-2.5 w-2.5 rounded-full bg-white/40" aria-label="Slide 3" aria-selected="false"></button>
+            </div>
+            <div class="mt-1 flex gap-2">
+              <button type="button" id="hero-prev" class="rounded border border-white/30 px-2 py-1 text-xs text-white/80 hover:bg-white/10" aria-label="Previous slide">‹</button>
+              <button type="button" id="hero-next" class="rounded border border-white/30 px-2 py-1 text-xs text-white/80 hover:bg-white/10" aria-label="Next slide">›</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features strip -->
+        <div class="bg-soft-pattern border-b border-slate-100">
+          <div class="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:grid-cols-3 sm:px-6 lg:px-8">
+            <article>
+              <div class="mb-3 h-1 w-10 bg-sky"></div>
+              <h2 class="font-display text-xl text-navy">Instant Feedback</h2>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Correct answers celebrate with confetti; incorrect ones reveal the right option with a motivating nudge.
+              </p>
+            </article>
+            <article>
+              <div class="mb-3 h-1 w-10 bg-gold"></div>
+              <h2 class="font-display text-xl text-navy">Full XI Maths Bank</h2>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                All MCQs from your exercise files (Ex 1.1–5.3) are loaded in <code class="rounded bg-white px-1 text-sky-deep">js/questions.js</code> — practise by chapter or mixed set.
+              </p>
+            </article>
+            <article>
+              <div class="mb-3 h-1 w-10 bg-flame"></div>
+              <h2 class="font-display text-xl text-navy">Results Dashboard</h2>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Score, percentage, answer breakdown, and a performance badge at the end of every attempt.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- CTA band -->
+        <div class="bg-navy">
+          <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-12 sm:flex-row sm:items-center sm:px-6 lg:px-8">
+            <div>
+              <h2 class="font-display text-2xl text-white">Ready for XI Mathematics?</h2>
+              <p class="mt-1 text-white/70">Pick an exercise or attempt a mixed practice set from the full bank.</p>
+            </div>
+            <a
+              href="#setup"
+              data-start-quiz
+              class="inline-flex shrink-0 items-center rounded-md bg-sky px-6 py-3 text-sm font-bold text-white transition hover:bg-sky-deep"
+            >
+              Launch Maths Quiz
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SETUP VIEW ========== -->
+      <section data-view="setup" class="view-panel bg-soft-pattern min-h-[70vh]" aria-label="Quiz Setup" aria-hidden="true">
+        <div class="mx-auto max-w-2xl px-4 py-12 sm:px-6 lg:px-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-deep">XI Mathematics</p>
+          <h1 class="font-display mt-2 text-3xl text-navy">Choose your practice set</h1>
+          <p class="mt-2 text-slate-600">Select an exercise from the Federal Board Class XI maths bank, or mix questions from all chapters.</p>
+
+          <div class="mt-8 space-y-5 rounded-xl border border-slate-200 bg-white p-6 shadow-brand sm:p-8">
+            <div>
+              <label for="quiz-exercise-select" class="block text-sm font-semibold text-navy">Exercise / chapter</label>
+              <select
+                id="quiz-exercise-select"
+                class="mt-2 w-full rounded-md border-2 border-slate-200 bg-mist px-3 py-3 text-sm text-navy focus:border-sky focus:outline-none"
+              >
+                <option value="all">All exercises</option>
+              </select>
+            </div>
+            <div>
+              <label for="quiz-limit-select" class="block text-sm font-semibold text-navy">How many questions?</label>
+              <select
+                id="quiz-limit-select"
+                class="mt-2 w-full rounded-md border-2 border-slate-200 bg-mist px-3 py-3 text-sm text-navy focus:border-sky focus:outline-none"
+              >
+                <option value="10">10 (quick practice)</option>
+                <option value="20" selected>20 (standard)</option>
+                <option value="40">40 (extended)</option>
+                <option value="all">Entire selection</option>
+              </select>
+            </div>
+            <button
+              type="button"
+              id="quiz-setup-start"
+              class="w-full rounded-md bg-gold px-6 py-3.5 text-sm font-bold text-navy transition hover:bg-gold-soft"
+            >
+              Begin Quiz →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== QUIZ VIEW ========== -->
+      <section data-view="quiz" class="view-panel bg-soft-pattern min-h-[70vh]" aria-label="Practice Quiz" aria-hidden="true">
+        <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
+          <div class="mb-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-deep">XI Mathematics</p>
+            <h1 id="quiz-title" class="font-display mt-2 text-3xl text-navy">Practice Quiz</h1>
+            <p id="quiz-desc" class="mt-2 text-slate-600"></p>
+          </div>
+
+          <!-- Progress -->
+          <div class="mb-6 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+            <div class="mb-2 flex flex-wrap items-center justify-between gap-2 text-sm">
+              <span id="quiz-question-counter" class="font-semibold text-navy">Question 1 / 10</span>
+              <span id="quiz-progress-label" class="text-slate-500">0 of 10 answered</span>
+            </div>
+            <div class="h-2.5 overflow-hidden rounded-full bg-slate-100">
+              <div id="quiz-progress-bar" class="progress-bar-fill h-full w-0 rounded-full bg-gradient-to-r from-sky to-gold"></div>
+            </div>
+          </div>
+
+          <!-- Question card -->
+          <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-brand sm:p-8">
+            <div id="quiz-question-root"></div>
+
+            <div class="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-6">
+              <button
+                type="button"
+                id="quiz-btn-prev"
+                class="inline-flex items-center rounded-md border-2 border-slate-200 px-4 py-2.5 text-sm font-semibold text-navy transition hover:border-navy disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                ← Previous
+              </button>
+              <div class="flex gap-2">
+                <button
+                  type="button"
+                  id="quiz-btn-next"
+                  class="inline-flex items-center rounded-md bg-navy px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-mid disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Next →
+                </button>
+                <button
+                  type="button"
+                  id="quiz-btn-finish"
+                  class="hidden inline-flex items-center rounded-md bg-gold px-5 py-2.5 text-sm font-bold text-navy transition hover:bg-gold-soft disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  View Results
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-6 text-center text-xs text-slate-500">
+            Maths bank loaded from exercise files. To correct an answer key, edit <code class="text-sky-deep">correctIndex</code> in <code class="text-sky-deep">js/questions.js</code> (0=A, 1=B, 2=C, 3=D).
+          </p>
+        </div>
+      </section>
+
+      <!-- ========== RESULTS VIEW ========== -->
+      <section data-view="results" class="view-panel bg-soft-pattern min-h-[70vh] py-12" aria-label="Quiz Results" aria-hidden="true">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div id="results-root"></div>
+        </div>
+      </section>
+
+      <!-- ========== ABOUT VIEW ========== -->
+      <section data-view="about" class="view-panel bg-white min-h-[70vh]" aria-label="About" aria-hidden="true">
+        <div class="bg-campus-mesh">
+          <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sky">About Us</p>
+            <h1 class="font-display mt-3 max-w-2xl text-3xl text-white sm:text-4xl">
+              Fazaia Inter College
+            </h1>
+            <p class="mt-4 max-w-xl text-lg italic text-gold-soft">Aspiring for Excellence</p>
+          </div>
+        </div>
+        <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+          <p class="text-lg leading-relaxed text-slate-700">
+            This portal is dedicated to <strong>Class XI Mathematics</strong> for Fazaia Inter College.
+            MCQs from Exercises 1.1 through 5.3 (complex numbers, matrices &amp; determinants, vectors, sequences &amp; series, and algebra) are built into the quiz engine with instant feedback and results.
+          </p>
+          <ul class="mt-8 space-y-3 text-slate-700">
+            <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-sky"></span> Brand colours from the official Fazaia emblem: navy, sky blue, gold, and torch-flame red.</li>
+            <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gold"></span> Full maths MCQ bank extracted from your exercise Word files into <code class="text-sky-deep">js/questions.js</code>.</li>
+            <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-flame"></span> Practise by exercise or mixed set — confetti on correct answers, supportive tips on mistakes.</li>
+          </ul>
+          <a
+            href="#setup"
+            data-start-quiz
+            class="mt-10 inline-flex items-center rounded-md bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:bg-navy-mid"
+          >
+            Begin Maths Practice
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="border-t border-navy/10 bg-navy text-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <div class="flex items-center gap-3">
+          <img src="assets/fazaia-logo.jpg" alt="" class="h-10 w-10 rounded-full object-cover ring-1 ring-gold/50" width="40" height="40" />
+          <div>
+            <p class="font-display font-bold">Fazaia Inter College</p>
+            <p class="text-xs text-white/60">Aspiring for Excellence</p>
+          </div>
+        </div>
+        <p class="text-sm text-white/55">
+          © <span id="footer-year">2026</span> Fazaia Schools &amp; Colleges. Educational practice portal.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts: questions → quiz → app -->
+    <script src="js/questions.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

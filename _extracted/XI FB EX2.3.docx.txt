@@ -1,0 +1,27 @@
+Q1. Choose the correct option. exercise2.3 (13X1=13)
+1. Matrices A and B will be inverse of each other only if:
+(A) AB = BA ≠ 1 (B) AB = 0 (C) BA = 0 (D) AB = BA = 1
+2. Let (2x58x)=(6-273), then values of x is:
+(A) ±3 (B) ±4 (C) ±5 (D) ±6
+3. If A = (23401-1201) is a matrix, then co-factor of 4 is:
+(A) -2 (B) 2 (C) 3 (D) 4
+4. (a+rbbc+rdd)=
+(A) (abcd) (B) (badc) (C) (adcb) (D) (dacb)
+5. If A and B are two invertible matrices, then (AB)^{-1}=
+(A) AB (B) A^{-1}B^{-1} (C) B^{-1}A^{-1} (D) (1)/(AB)
+6. If A is a matrix of order 3 x 3, such that |A| = 2, then |3A| =
+(A) 6 (B) 8 (C) 9 (D) 54
+7. For a square matrix A of order 3 x 3, |A| = -4 and A​_{13} = 1; A​_{23} = -5; A​_{33} = 1, a​_{13} = 6; A​_{23} = 2, then a​_{33} = :
+(A) 2 (B) 1 (C) 3 (D) 0
+8. For what value of λ, the matrix (λ13218031) is singular:
+(A) λ=0 (B) λ=-(16)/(23) (C) λ=-(16)/(23) (D) λ=-(16)/(23)
+9. For the matrix A = (1232-1303-1), minor of a​_{22} is:
+(A) 1 (B) -1 (C) 0 (D) 91
+10. For the matrix A = (2-3560415-7), M​_{13}+ A​_{22} =
+(A) 30 (B) -19 (C) -49 (D) 11
+11. For any square matrix A of order n x n, the co-factor of an element a_{ij} of matrix A is denoted by A​_{ij} and is defined as:
+(A) A​_{ij} = M​_{ij} (B) A​_{ij} = (-1)^{-i}M​_{ij} (C) A​_{ij} = (-1)^{i+j}M​_{ij} (D) A​_{ij} = (1)^{i+j}M​_{ij}
+12. For a square matrix A of order 3 x 3, Adj A =
+(A) (A_{11}A_{12}A_{13}A_{21}A_{22}A_{23}A_{31}A_{32}A_{33}) (B) (A_{11}A_{21}A_{31}A_{12}A_{22}A_{32}A_{13}A_{23}A_{33}) (C) (A_{11}A_{21}A_{31}A_{12}A_{22}A_{32}A_{13}A_{23}A_{33})^{t} (D) All of these
+13. If A = (x111) and (1)/((A)) = 7, then x =
+(A) (7)/(8) (B) (8)/(7) (C) (9)/(7) (D) (7)/(5)

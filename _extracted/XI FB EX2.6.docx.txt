@@ -1,0 +1,36 @@
+Q1. Choose the correct option. exercise 2.6 (23X1=23)
+1. For a unique solution of system rank of matrix A must be equal to: (A) Rank of A_{b} (B) Rank of A (C) (A_{b}) (D) (A)
+2. The value of x, for the non-homogenous system of linear equations 2x+3y−z=1,x−y+z=3;x+2y−z=1 is: (A) -4 (B) -5 (C) 1 (D) 4
+3. Trivial solution of the system of homogenous equations
+a_{1}x+b_{1}y+c_{1}z=0a_{2}x+b_{2}y+c_{2}z=0a_{3}x+b_{3}y+c_{3}z=0
+is: (A) (0, 0, 1) (B) (0, 1, 0) (C) (1, 0, 0) (D) (0, 0, 0)
+4. Condition for the system
+a_{1}x+b_{1}y+c_{1}z=0a_{2}x+b_{2}y+c_{2}z=0a_{3}x+b_{3}y+c_{3}z=0
+has non-trivial solution if: (A) (A)≠0 (B) (A)=0 (C) A=1 (D) (A)=−1
+5. Augmented matrix of the system of linear equations 3x−2y+z=5;x+3y−z=0;−x+4z=11 is: (A) (3−21513−10−10411) (B) (3−251130−1−10114) (C) (3−21513−10−10411) (D) (31−111−23001−145)
+6. The augmented matrix (125701340001) is in row reduced echelon form, then the system of linear equations has: (A) Unique solution (B) Trivial solution (C) Infinitely many solutions (D) No solution
+7. The augmented matrix of a system of linear equations in the variables x, y and z in reduced row-echelon form is (100201010013), then: (A) x=3;y=1;z=2 (B) x=2;y=1;z=3 (C) x=0;y=0;z=0 (D) x=1;y=1;z=3
+8. The system of linear equations
+a_{1}x+b_{1}y+c_{1}z=k_{1}a_{2}x+b_{2}y+c_{2}z=k_{2}a_{3}x+b_{3}y+c_{3}z=k_{3}
+is called system of homogenous linear equations if: (A) a_{1}=a_{2}=a_{3}=0 (B) b_{1}=b_{2}=b_{3}=0 (C) c_{1}=c_{2}=c_{3}=0 (D) k_{1}=k_{2}=k_{3}=0
+9. How many solutions does the system
+3x−2y+z=02x+y−3z=0x−y+z=0
+has: (A) Only trivial solution (B) Non-trivial solution (C) Unique solution (D) No solution
+10. A system of linear equations is called In-consistent system if it has: (A) Unique solution (B) Trivial solution (C) Infinitely many solutions (D) No solution
+11. For what value of λ, the system
+x+2y−3z=43x−y+5z=24x+y+(λ^{2}−14)z=λ+2
+has no solution: (A) λ=±3 (B) λ=±2 (C) λ=±4 (D) λ=±1
+12. In the system
+x+y+2z=12x+y+z=13x−5y+4z=−3
+, the matrix (1122113−54) is called: (A) Matrix of co-factors (B) Matrix of co-efficients (C) Augmented matrix (D) All of these
+13. Solution of the system of equations x+y=5;x−y=1 is: (A) {(2,3)} (B) {(−2,−3)} (C) {(3,2)} (D) {(−3,−2)}
+14. If order of A is m x n and order of B is n x p then order of AB is: (A) n x p (B) m x p (C) p x m (D) n x n
+15. If A is a row matrix of order 1 x n then order of A^{t}A is: (A) 1 x n (B) n x 1 (C) 1 x 1 (D) n x n
+16. For an element a_{ij} of a square matrix A: (A) a_{ij}=(−1)^{i+j}A_{ij} (B) a_{ij}=(−1)^{i+j}M_{ij} (C) A_{ij}=((−1)^{i+j})/(M_{ij}) (D) a_{ij}=M_{ij}
+17. If A is any matrix then A and A^{t} are always conformable for:
+18. If A is a square matrix of order 3 × 3 and (A)=3 then value of (adjA) is: (A) 3 (B) (1)/(3) (C) 9 (D) 6
+19. For the square matrix A or order 3 × 3 with (A)=9;A_{21}=2;A_{22}=3;A_{23}=−1;a_{21}=1;a_{23}=2, the value of a_{22} is: (A) 2 (B) 3 (C) 9 (D) -1
+20. System of homogenous linear equations has non-trivial solution if: (A) (A)>0 (B) (A)<0 (C) (A)=0 (D) (A)≠0
+21. For non-homogenous system of equation; the system is In-consistent if: (A) Rank A = Rank A_{b} (B) Rank A ≠ Rank A_{b} (C) Rank A < no.of variables (D) Rank A > no.of variables
+22. For a system of non-homogenous equations with three variables system will have unique solution if: (A) Rank A < 3 (B) Rank A_{b} < 3 (C) Rank A = Rank A_{b} = 3 (D) Rank A = Rank A_{b} < 3
+23. A system of non-homogenous equations having infinite many solutions can be solved by using: (A) Inversion method (B) Cramer’s rule (C) Gauss-Jordan method (D) All of these

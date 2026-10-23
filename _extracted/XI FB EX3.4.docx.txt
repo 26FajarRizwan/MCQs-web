@@ -1,0 +1,19 @@
+Q1. Choose the correct option. (18X1=18)
+a. (b×a) is equal to:(A) 1 (B) a^{2}b (C) 0 (D) 2
+The non-zero vectors a, b and c are called coplanar if a. (b×c) is equal to:(A) 1 (B) -1 (C) 0 (D) 2
+2i.(j×2k) is equal to:(A) 2 (B) 4 (C) 0 (D) 1
+a. (b×c) = b. (c×a) is equal:(A) a.(b.c) (B) c.(a × b) (C) a × (b × c) (D) (a.b) × c
+The value of λ for which the vectors i−2j+3k,−2i+3j−4k and −i+λj+2k are coplanar:(A) (1)/(2) (B) −(1)/(2) (C) 2 (D) -2
+The volume of parallelepiped with given coterminal edges 2i+3j−4k, i+2j−3k and 3i+j+k is:(A) 1 (B) 2 (C) 0 (D) 3
+The volume of tetrahedron with −2i+7j+k,4i+2j+k and 2j+k is:(A) 15 (B) 20 (C) (10)/(3) (D) (10)/(3)
+u.(v×w)+v.(u×w)+w.(u×v)=(A) 1 (B) 0 (C) u.(v×w) (D) 3u.(v×w)
+The vector in the direction of i+2j−2k and having magnitude 12 is:(A) (12)/(7)(i+2j−2k) (B) 12(i+2j−2k) (C) (1)/(3)(i+2j−2k) (D) 4(i+2j−2k)
+The position vectors of three vertices of triangle are 2i+j−k,3i−2j+4k and i+4j−3k. The triangle is:(A) Isosceles (B) Right angled (C) Scalene (D) Equilateral
+Given two vectors i−j and i+2j then the unit vector coplanar with two vectors and perpendicular to first is:(A) ±(1)/(√(2))(i−j) (B) ±(1)/(√(5))(2i+j) (C) ±(1)/(√(2))(i+j) (D) ±(1)/(√(5))(i+2j)
+If (a+b)=(a−b) then:(A) a=b (B) a⋅b=0 (C) a∥b (D) a=−b
+If a,b,c are mutually perpendicular unit vectors, the value of (a+b+c) is:(A) 1 (B) √(2) (C) √(3) (D) 2
+If a+b+c=0 and (a)=3,(b)=5 and (c)=7 then angle between a and b is:(A) (π)/(3) (B) (π)/(2) (C) (5π)/(3) (D) (π)/(6)
+If a=2i+3j−k,b=−i+2j−4k and c=i+j+k, then the value of (a×b).(a×c) is:(A) 74 (B) -74 (C) 52 (D) -52
+If (a×b)=4 and (a.b)=2 then (a)^{2}(b)^{2} is:(A) 6 (B) 20 (C) 2 (D) 8
+If θ is the angle between two vectors a and b and (a×b)=(a.b), then θ is:(A) 0 (B) (π)/(2) (C) (π)/(4) (D) (π)/(3)
+The value of (a−b b−c c−a) where (a)=1,(b)=5,(c)=3 is:(A) 0 (B) 1 (C) 6 (D) 15

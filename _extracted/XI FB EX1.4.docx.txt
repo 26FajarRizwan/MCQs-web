@@ -1,0 +1,36 @@
+Q1. Choose the correct option. exercise1.4
+1. If z=√(2)+√(2)i then polar coordinates of z are: (A) (1,(π)/(4)) (B) (2,(π)/(4)) (C) (√(2),(π)/(4)) (D) (2√(2),(π)/(4))
+2. Polar coordinates of the complex number z=x+yi are: (A) (r,θ) (B) (θ,r) (C) (−r,−θ) (D) (r,−θ)
+3. Polar coordinates of the conjugate of z=x+yi are: (A) (r,θ) (B) (r,−θ) (C) (−r,−θ) (D) (r,−θ)
+4. What is the position of the particle from mean position when amplitude is 0.0004mm and angle is (π)/(3): (A) (1)/(500)(1+√(3)i) (B) (1)/(5000)(1+√(3)i) (C) (1)/(5000)(√(3)+i) (D) (1)/(500)(√(3)+i)
+5. The polar coordinates (2,(π)/(3)) gives the complex number in cartesian form is: (A) 1+√(3)i (B) √(3)+i (C) (√(3))/(2)+(i)/(2) (D) 2(1+√(3)i)
+6. Polar form of z=x+yi is: (A) z=rcosθ−isinθ (B) z=r(cosθ+isinθ) (C) z=rsinθ+icosθ (D) z=r(sinθ+icosθ)
+7. The complex number z=(cosθ+isinθ) can also be written as: (A) z=cisθ (B) z=sicθ (C) z=e^{iθ} (D) Both A and C
+8. The argument of a complex number that lies in the interval −π<θ≤π is called: (A) Principal argument (B) Limited argument (C) Minimum argument (D) Maximum argument
+9. In complex plane, real part is drawn along: (A) x-axis (B) y-axis (C) origin (D) xy-plane
+10. Principal argument of z lies in the interval: (A) −π<θ≤π (B) −π≤θ≤π (C) −π≤θ<π (D) −π<θ<π
+11. Principal argument of √(3)−i is: (A) (π)/(6) (B) (5π)/(6) (C) −(5π)/(6) (D) −(π)/(6)
+12. e^{iθ} is known as: (A) Euler’s formula (B) Complex formula (C) Exponential formula (D) Cauchy’s formula
+13. Write z=−2−2i in polar form. (A) 2√(2)(cos(3π)/(4)+isin(3π)/(4)) (B) 2√(2)(cos(3π)/(4)−isin(3π)/(4)) (C) 2√(2)(−cos(3π)/(4)+isin(3π)/(4)) (D) 2√(2)(−cos(3π)/(4)−isin(3π)/(4))
+14. Rectangular form of z=2(cos((π)/(3))+isin((π)/(3))) is: (A) 1+i√(3) (B) i (C) √(3)+i (D) 2i
+15. Rectangular form of z=(2(cos((π)/(6))−isin((π)/(6))))/(4) is: (A) −(1)/(2)−(1)/(2) (B) (1)/(2) (C) (1)/(2) (D) −(1)/(2)
+16. If z=r(cosθ+isinθ) then z^{−1}= (A) r^{−1}(cos^{−1}θ+isin^{−1}θ) (B) (1)/(r)(cosθ−isinθ) (C) (1)/(r)(−cosθ+isinθ) (D) r(cosθ−isinθ)
+17. Algebraic form of z=√(2)(cos315^{∘}+isin315^{∘}) is: (A) 1+i (B) 1−i (C) i (D) 2+i
+18. In x=x_{max}e^{iωt}, ω is the: (A) Velocity (B) Angular Velocity (C) Acceleration (D) Displacement
+19. The resistance of flow of electricity ’Z’ is called: (A) Impedance (B) Voltage (C) Amplitude (D) Watt
+20. Value of impedance Z, if E=(100+10i) volts and I=(−8+3i) amps: (A) (10)/(73)(77+38i) (B) (−10)/(73)(38+77i) (C) (10)/(73)(77−38i) (D) (−10)/(73)(77+38i)
+21. In simple harmonic motion we have to determine the position of the microscopic particle form its: (A) Maximum position (B) Mean position (C) Minimum position (D) Least position
+22. The angular velocity ω=? (A) (2π)/(f) (B) (f)/(2π) (C) 2πf (D) (π)/(2f)
+23. The electromotive force ’E’ is called: (A) Voltage (B) Impedance (C) Frequency (D) Amplitude
+24. Which equation gives the position of particle from its mean position:
+(A) x=x_{max}e^{iωt} (B) x_{max}=xe^{iθ} (C) x=x_{max}e^{iθ} (D) xe^{iθ}x_{max}=1
+25. Every real number is also a ________ number. (A) Natural (B) Integer (C) Complex (D) Rational
+26. Every complex number has ________. (A) One (B) Two (C) Three (D) No
+27. Magnitude of a complex number Z is the distance of z from: (A) (0, 0) (B) (1, 0) (C) (0, 1) (D) (1, 1)
+28. If Z is a complex number then its mirror image is: (A) z (B) (1)/(z) (C) z̄ (D) Z
+29. In complex plane imaginary part is drawn along ________. (A) x-axis (B) y-axis (C) origin (D) xy-plane
+30. If z_{1}=3+2i and z_{2}=−3−2i then: (A) z_{1}>z_{2} (B) z_{1}<z_{2} (C) z_{1}=z_{2} (D) z_{1}=−z_{2}
+31. Diagram representing a complex number is called ________ diagram. (A) Vector (B) Venn (C) Argand (D) Ordered pair
+32. If z=3+4i z^{−1} is: (A) (11)/(3) (B) ((3)/(25),(−4)/(25)) (C) ((3)/(25),(4)/(25)) (D) ((−3)/(25),(−4)/(25))
+33. The value of √((−25)(−4)) is: (A) i√(10) (B) −10 (C) 10i (D) 10
+34. If ((1+i)/(1−i))^{n}=1, then least positive value of n is: (A) 1 (B) 2 (C) 3 (D) 4

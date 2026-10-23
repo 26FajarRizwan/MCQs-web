@@ -1,0 +1,11 @@
+Q1. Choose the correct option. exercise2.5 (7X1=7)
+1. For the matrix (1−21731−122327), R_{2}−3R_{1} will be equal to:
+(A) (1−2171−2172327) (B) (1−21707−4−19070−7) (C) (1−21707−4−192327) (D) (1−217232707−4−19)
+2. Which of the following matrix is in echelon form?
+(A) (1−21707−4192327) (B) (1−217000001−24) (C) (1−2−4001000) (D) (1−2−4012000)
+3. The matrix in reduced echelon form is:
+(A) (01061034500010.401100) (B) (13−61000014−30001−200000) (C) (130000010−30001−200000) (D) (130000010−30000100000)
+4. The number of non-zero rows of a matrix in the echelon form is called: (A) Adjoint of a matrix (B) Inverse of a matrix (C) Rank of a matrix (D) Transpose of a matrix
+5. Rank of the matrix (111) is: (A) 0 (B) 1 (C) 2 (D) 3
+6. Rank of the matrix (1000100−10) is: (A) 1 (B) 2 (C) 3 (D) 4
+7. For echelon form of a matrix. If a row does not consist entirely of zeros, then first non-zero number in the row should be: (A) -2 (B) 1 (C) -1 (D) 2

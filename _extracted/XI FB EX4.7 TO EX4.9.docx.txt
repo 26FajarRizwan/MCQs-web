@@ -1,0 +1,28 @@
+Q1. Choose the correct option.
+1. The Greek letter ∑ is used to denote: (A) Product (B) Difference (C) Sum (D) Division
+2. 1+3+5+… to n terms is equivalent to: (A) ∑_{K=1}^{n}(2K+1) (B) ∑_{K=1}^{n}(2K−1) (C) ∑(2K±1) (D) ∑_{K=1}^{n}(2K−1)
+3. ∑_{K=1}^{4}(2+5)= (A) 4 (B) 55 (C) 35 (D) None of these
+4. The sum of first n natural numbers is denoted by: (A) ∑_{K=1}^{n}K (B) ∑_{K^{2}}^{K=1}​ (C) ∑K^{3} (D) ∑_{K=1}^{n}K^{4}
+5. ∑_{K=1}^{n}K^{2}=? (A) (n(n−1))/(2) (B) (n(n+1))/(2) (C) (n(n+1)(2n+1))/(6) (D) (n(n+1)^{2})
+6. ∑_{K=1}^{n}(K^{m}−(K−1)^{m})=? (A) m^{n} (B) n^{m} (C) m^{n} (D) m^{2}
+7. ∑_{K=1}^{n}K^{3}=? (A) (n(n−1))/(2) (B) (n(n+1))/(2) (C) (n(n+1)(2n+1))/(6) (D) ((n(n+1)^{2}))/(2)
+8. Sum to infinity of arithmetic geometric series: (A) S_{∞}=(a_{1})/(1−r) (B) S_{∞}=(a_{1})/(1−r)−(dr)/((1−r)^{2}) (C) S=(a_{1})/(1−r′)+(a_{1})/((1−r)^{2}) (D) None of these
+9. Sum to n terms 1×4+2×7+3×10+… is: (A) n(n+1)^{2} (B) n(n+1) (C) (n(n+1)(2n+1))/(6) (D) (n(n−1)(n+1))/(6)
+10. Sum to n terms (1)/(1×4)+(1)/(4×7)+(1)/(7×10)+… is: (A) (n)/(3n+1) (B) (3n)/(n+1) (C) (2n)/(3n+1) (D) None of these
+11. How many terms of the sequence 18, 15, 12,... are needed to give a sum of 60? (A) upto 7th (B) upto 10th (C) upto 6th (D) upto 5th
+12. Find the 20th term from the end of A.P 2, 7, 12, 17, ........., 12. (A) 222 (B) 132 (C) 127 (D) 122
+13. In the sequence 1, 2, 2, 3, 3, 3, 4, 4, 4, 4,..... when n consecutive terms have the value n, the 22nd term is: (A) 6 (B) 7 (C) 8 (D) 9
+14. If a, b, c in A.P then 3^{a},3^{b},3^{c} are in: (A) G.P (B) H.P (C) A.P (D) None of these
+15. Predict the general term for the geometric sequence: (A) (4)/(3^{n−2}) (B) (4)/(3^{n−1}) (C) (4)/(3^{n}) (D) (4)/(3^{n+1})
+16. 0+0.1+0.01+0.001+0.0001+… sum is: (A) 9 (B) (19)/(10) (C) (1)/(9) (D) (9)/(10)
+17. Find first term of the geometric series, when S_{n}=30,n=4,r=−2: (A) 6 (B) -6 (C) 8 (D) -8
+18. The arithmetic means in the sequence -7, __ , __ , __ , 5 are: (A) -3, 1 (B) 3, 1 (C) -4, 2 (D) 3, -1
+19. Geometric mean between 1 and (1)/(3) is: (A) 3 (B) (1)/(3) (C) √(3) (D) (1)/(√(3))
+20. ∑_{K=1}^{3}K^{2} is equal to: (A) 14 (B) 13 (C) 5 (D) 30
+21. The sigma notation for the sum -2 + 4 - 6 + 8 is: (A) ∑_{K=1}^{3}(−1)^{k}(K+1) (B) ∑_{K=1}^{4}(−1)^{k}2K (C) ∑_{K=1}^{4}(−1)^{k}2K (D) ∑_{K=2}^{5}(−1)^{k}2K
+22. ∑_{K=1}^{5}5 is equal to: (A) n (B) 5n (C) 5 (D) 5^{n}
+23. The general term of the given series (1)/(1.3)+(1)/(2.5)+(1)/(3.7)+… is: (A) (1)/(n(2n+1)) (B) (1)/(n(n+2)) (C) (1)/((n+1)(2n−1)) (D) (1)/((n−1)(2n+1))
+24. In (1)/(1.7)+(1)/(7.10)+(1)/(10.13)+…, then n^{th} term is: (A) (1)/((3n−1)(3n+1)) (B) (1)/((3n−2)(3n+4)) (C) (1)/((3n+1)(3n+4)) (D) (1)/((n+2)(n+6))
+25. The sum ∑_{r=2}^{∞}(1)/(2^{r−1}) represents: (A) 1 (B) (3)/(4) (C) (4)/(3) (D) (1)/(4)
+26. Sum of the series 1+3+5+7+9+11+… is: (A) n^{10} (B) n^{2} (C) n(n+1) (D) n−1
+27. ∑_{K=1}^{3}3 is equal to: (A) 10 (B) 10^{3} (C) 300 (D) 30
