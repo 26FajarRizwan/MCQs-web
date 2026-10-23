@@ -4,8 +4,10 @@ Interactive practice website for **Class XI Mathematics** MCQs (Federal Board st
 
 ## Features
 
+- Student enters **name** before the test (shown on quiz and final result card)
 - Instant feedback (green + confetti on correct; red + correct answer on wrong)
-- Results dashboard (score, percentage, breakdown, badge)
+- On wrong answers: **Why this happened** + **Best solution** explanation
+- Results dashboard with student name, score, percentage, breakdown, badge
 - Exercise filter and question limit on the setup screen
 - Fully responsive (mobile and desktop)
 - Fazaia brand colours (navy, sky blue, gold, flame red)
@@ -14,8 +16,9 @@ Interactive practice website for **Class XI Mathematics** MCQs (Federal Board st
 
 1. Open `index.html` in any modern browser (Chrome, Edge, Firefox).
 2. Click **Start Maths Quiz**.
-3. Choose an exercise (or all) and how many questions.
+3. Enter your **name**, choose an exercise (or all) and how many questions.
 4. Click **Begin Quiz**.
+5. At the end, your name and score appear on the result card.
 
 No install or build step is required. Tailwind CSS and canvas-confetti load from CDN.
 
@@ -26,6 +29,7 @@ fazaia/
   index.html          Main page (home, setup, quiz, results, about)
   css/styles.css      Brand styles and animations
   js/questions.js     Maths MCQ bank (edit answers here)
+  js/solutions.js     Why-wrong + best-solution helper
   js/quiz.js          Quiz engine
   js/app.js           Navigation and page views
   assets/             Logo and images
@@ -47,11 +51,13 @@ Each question looks like:
   question: "Your question text?",
   options: ["A text", "B text", "C text", "D text"],
   correctIndex: 1,   // 0 = A, 1 = B, 2 = C, 3 = D
-  explanation: "Optional tip"
+  explanation: "Optional tip",
+  whyWrong: "Optional: why a common mistake is wrong",
+  solution: "Optional: step-by-step best solution"
 }
 ```
 
-To fix an answer, change `correctIndex` only.
+To fix an answer, change `correctIndex` only. Optional `solution` / `whyWrong` improve the learning feedback.
 
 ## Re-extract from Word files
 

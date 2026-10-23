@@ -23,16 +23,17 @@
     { min: 0, label: "Keep Training", tone: "slate", message: "Every expert was once a beginner. Review and retry!" },
   ];
 
-  /** @type {{ questions: object[], current: number, answers: (number|null)[], locked: boolean[], filterLabel: string }} */
-  let state = createInitialState("all");
+  /** @type {{ questions: object[], current: number, answers: (number|null)[], locked: boolean[], filterLabel: string, studentName: string }} */
+  let state = createInitialState("all", 0, "");
 
   function allQuestions() {
     return Array.isArray(window.QUIZ_QUESTIONS) ? window.QUIZ_QUESTIONS : [];
   }
 
-  function createInitialState(exerciseFilter, limit) {
+  function createInitialState(exerciseFilter, limit, studentName) {
     let questions = allQuestions().map((q) => ({ ...q }));
     let filterLabel = "All XI Mathematics exercises";
+    const name = String(studentName ?? "").trim();
 
     if (exerciseFilter && exerciseFilter !== "all") {
       questions = questions.filter((q) => q.exercise === exerciseFilter);
@@ -55,7 +56,27 @@
       answers: questions.map(() => null),
       locked: questions.map(() => false),
       filterLabel,
+      studentName: name,
     };
+  }
+
+  function readStudentName() {
+    return String($("student-name")?.value || "").trim();
+  }
+
+  function requireStudentName() {
+    const name = readStudentName();
+    const err = $("student-name-error");
+    const input = $("student-name");
+    if (name.length < 2) {
+      err?.classList.remove("hidden");
+      input?.classList.add("border-flame");
+      input?.focus();
+      return null;
+    }
+    err?.classList.add("hidden");
+    input?.classList.remove("border-flame");
+    return name;
   }
 
   function getExercises() {
@@ -235,23 +256,37 @@
     if (!el) return;
 
     if (isCorrect) {
+      const tip = window.FazaiaSolutions?.buildCorrectHelp(q) || "";
       el.innerHTML = `
-        <div class="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-800">
-          <p class="font-semibold">Correct - well done!</p>
-          ${q.explanation ? `<p class="mt-1 text-sm text-emerald-700">${escapeHtml(q.explanation)}</p>` : ""}
+        <div class="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-900">
+          <p class="font-semibold">Correct - well done${state.studentName ? `, ${escapeHtml(state.studentName)}` : ""}!</p>
+          ${tip ? `<p class="mt-2 text-sm text-emerald-800"><span class="font-semibold">Solution:</span> ${escapeHtml(tip)}</p>` : ""}
         </div>
       `;
-    } else {
-      const correctText = q.options[q.correctIndex];
-      const label = OPTION_LABELS[q.correctIndex] || String(q.correctIndex + 1);
-      el.innerHTML = `
-        <div class="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-900">
-          <p class="font-semibold">Not quite - the correct answer is ${label}: ${escapeHtml(correctText)}</p>
-          <p class="mt-1 text-sm text-red-800">${escapeHtml(pickMotivation())}</p>
-          ${q.explanation ? `<p class="mt-2 text-sm text-red-700/90">${escapeHtml(q.explanation)}</p>` : ""}
-        </div>
-      `;
+      return;
     }
+
+    const correctText = q.options[q.correctIndex];
+    const label = OPTION_LABELS[q.correctIndex] || String(q.correctIndex + 1);
+    const help = window.FazaiaSolutions?.buildWrongAnswerHelp(q, selectedIndex) || {
+      why: "That option is not correct for this question.",
+      solution: `Correct option is ${label}: ${correctText}`,
+    };
+
+    el.innerHTML = `
+      <div class="rounded-lg border border-red-200 bg-red-50 px-4 py-4 text-red-950 space-y-3">
+        <p class="font-semibold">Incorrect. Correct answer: ${label}) ${escapeHtml(correctText)}</p>
+        <div class="rounded-md bg-white/70 px-3 py-2.5 border border-red-100">
+          <p class="text-xs font-bold uppercase tracking-wide text-flame">Why this happened</p>
+          <p class="mt-1 text-sm text-slate-800">${escapeHtml(help.why)}</p>
+        </div>
+        <div class="rounded-md bg-emerald-50 px-3 py-2.5 border border-emerald-200">
+          <p class="text-xs font-bold uppercase tracking-wide text-emerald-700">Best solution</p>
+          <p class="mt-1 text-sm text-emerald-900">${escapeHtml(help.solution)}</p>
+        </div>
+        <p class="text-sm text-red-800">${escapeHtml(pickMotivation())}</p>
+      </div>
+    `;
   }
 
   function updateNavButtons() {
@@ -296,6 +331,10 @@
       const selected = state.answers[i];
       const ok = selected === q.correctIndex;
       if (ok) correct += 1;
+      const help =
+        !ok && selected != null
+          ? window.FazaiaSolutions?.buildWrongAnswerHelp(q, selected)
+          : null;
       return {
         id: q.id,
         subject: q.subject,
@@ -305,6 +344,8 @@
         isCorrect: ok,
         selectedText: selected != null ? q.options[selected] : "-",
         correctText: q.options[q.correctIndex],
+        why: help?.why || "",
+        solution: help?.solution || "",
       };
     });
 
@@ -312,7 +353,15 @@
     const incorrect = total - correct;
     const percent = total ? Math.round((correct / total) * 100) : 0;
 
-    return { correct, incorrect, total, percent, breakdown, badge: getBadge(percent) };
+    return {
+      studentName: state.studentName || "Student",
+      correct,
+      incorrect,
+      total,
+      percent,
+      breakdown,
+      badge: getBadge(percent),
+    };
   }
 
   function renderResults() {
@@ -332,8 +381,9 @@
         <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg shadow-navy/5">
           <div class="bg-campus-mesh px-6 py-8 text-center text-white sm:px-10">
             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky">Quiz Complete</p>
-            <h2 class="font-display mt-2 text-3xl sm:text-4xl">Your Results</h2>
-            <p class="mt-2 text-white/75">Fazaia Inter College - Practice Assessment</p>
+            <h2 class="font-display mt-2 text-3xl sm:text-4xl">${escapeHtml(results.studentName)}</h2>
+            <p class="mt-2 text-lg text-gold-soft">Your score: ${results.correct} / ${results.total} (${results.percent}%)</p>
+            <p class="mt-1 text-white/75">Fazaia Inter College - XI Mathematics</p>
           </div>
 
           <div class="grid gap-4 border-b border-slate-100 px-6 py-8 sm:grid-cols-3 sm:px-10">
@@ -360,7 +410,7 @@
 
             <div class="mt-8">
               <div class="mb-2 flex justify-between text-sm text-slate-600">
-                <span>Accuracy</span>
+                <span>Accuracy for ${escapeHtml(results.studentName)}</span>
                 <span class="font-semibold text-navy">${results.percent}%</span>
               </div>
               <div class="h-3 overflow-hidden rounded-full bg-slate-100">
@@ -373,24 +423,34 @@
               ${results.breakdown
                 .map(
                   (row, i) => `
-                <li class="flex flex-col gap-1 px-4 py-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-                  <div class="min-w-0 flex-1">
-                    <p class="text-sm font-medium text-navy">
-                      <span class="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full text-xs font-bold ${
-                        row.isCorrect ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"
-                      }">${row.isCorrect ? "✓" : "✗"}</span>
-                      Q${i + 1}. ${escapeHtml(row.question)}
-                    </p>
-                    <p class="mt-1 text-xs text-slate-500">${escapeHtml(row.subject || "")}</p>
+                <li class="px-4 py-4">
+                  <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                    <div class="min-w-0 flex-1">
+                      <p class="text-sm font-medium text-navy">
+                        <span class="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full text-xs font-bold ${
+                          row.isCorrect ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"
+                        }">${row.isCorrect ? "✓" : "✗"}</span>
+                        Q${i + 1}. ${escapeHtml(row.question)}
+                      </p>
+                      <p class="mt-1 text-xs text-slate-500">${escapeHtml(row.subject || "")}</p>
+                    </div>
+                    <div class="shrink-0 text-sm sm:text-right">
+                      ${
+                        row.isCorrect
+                          ? `<span class="text-emerald-700">Your answer: ${escapeHtml(row.selectedText)}</span>`
+                          : `<span class="block text-red-700">Yours: ${escapeHtml(row.selectedText)}</span>
+                             <span class="block text-emerald-700">Correct: ${escapeHtml(row.correctText)}</span>`
+                      }
+                    </div>
                   </div>
-                  <div class="shrink-0 text-sm sm:text-right">
-                    ${
-                      row.isCorrect
-                        ? `<span class="text-emerald-700">Your answer: ${escapeHtml(row.selectedText)}</span>`
-                        : `<span class="block text-red-700">Yours: ${escapeHtml(row.selectedText)}</span>
-                           <span class="block text-emerald-700">Correct: ${escapeHtml(row.correctText)}</span>`
-                    }
-                  </div>
+                  ${
+                    !row.isCorrect
+                      ? `<div class="mt-3 space-y-2 rounded-lg bg-mist p-3 text-sm">
+                          <p><span class="font-semibold text-flame">Why:</span> <span class="text-slate-700">${escapeHtml(row.why)}</span></p>
+                          <p><span class="font-semibold text-emerald-700">Best solution:</span> <span class="text-slate-700">${escapeHtml(row.solution)}</span></p>
+                        </div>`
+                      : ""
+                  }
                 </li>`
                 )
                 .join("")}
@@ -455,12 +515,19 @@
     const lim = $("quiz-limit-select");
     const exercise = sel?.value || "all";
     const limit = lim?.value === "all" ? 0 : Number(lim?.value || 0);
-    state = createInitialState(exercise, limit);
+    const name = state.studentName || readStudentName();
+    state = createInitialState(exercise, limit, name);
     renderQuestion();
     updateMeta();
   }
 
   function startQuiz(exerciseFilter, limit) {
+    const name = requireStudentName();
+    if (!name) {
+      window.FazaiaApp?.showView("setup");
+      return;
+    }
+
     const sel = $("quiz-exercise-select");
     const lim = $("quiz-limit-select");
     const exercise = exerciseFilter || sel?.value || "all";
@@ -468,10 +535,15 @@
 
     if (sel && exerciseFilter) sel.value = exerciseFilter;
 
-    state = createInitialState(exercise, n);
+    state = createInitialState(exercise, n, name);
     if (!state.questions.length) {
       alert("No questions found for this selection.");
       return;
+    }
+    try {
+      localStorage.setItem("fazaia_student_name", name);
+    } catch (_) {
+      /* ignore */
     }
     updateMeta();
     renderQuestion();
@@ -480,6 +552,15 @@
 
   function showSetup() {
     populateExerciseSelect();
+    const input = $("student-name");
+    if (input && !input.value) {
+      try {
+        const saved = localStorage.getItem("fazaia_student_name");
+        if (saved) input.value = saved;
+      } catch (_) {
+        /* ignore */
+      }
+    }
     updateMeta();
     window.FazaiaApp?.showView("setup");
   }
@@ -487,11 +568,15 @@
   function updateMeta() {
     const title = $("quiz-title");
     const desc = $("quiz-desc");
+    const studentLine = $("quiz-student-line");
     const meta = window.QUIZ_META || {};
     if (title) title.textContent = meta.title || "XI Mathematics Quiz";
     if (desc) {
       const extra = state.filterLabel ? ` | ${state.filterLabel}` : "";
       desc.textContent = (meta.description || "") + extra;
+    }
+    if (studentLine) {
+      studentLine.textContent = state.studentName ? `Student: ${state.studentName}` : "";
     }
     const countEl = $("bank-count");
     if (countEl) countEl.textContent = String(allQuestions().length);
@@ -502,6 +587,17 @@
     $("quiz-btn-next")?.addEventListener("click", goNext);
     $("quiz-btn-finish")?.addEventListener("click", finishQuiz);
     $("quiz-setup-start")?.addEventListener("click", () => startQuiz());
+
+    $("student-name")?.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        startQuiz();
+      }
+    });
+    $("student-name")?.addEventListener("input", () => {
+      $("student-name-error")?.classList.add("hidden");
+      $("student-name")?.classList.remove("border-flame");
+    });
 
     document.querySelectorAll("[data-start-quiz]").forEach((el) => {
       el.addEventListener("click", (e) => {
