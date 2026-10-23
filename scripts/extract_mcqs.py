@@ -203,7 +203,7 @@ def subject_from_filename(name: str) -> str:
     topic = chapter_map.get(key, "Mathematics")
     label = re.search(r"EX(.+?)(?:\.docx)?$", name, re.I)
     lab = label.group(1).strip() if label else "?"
-    return f"XI Maths · Ex {lab} — {topic}"
+    return f"XI Maths - Ex {lab} - {topic}"
 
 
 def stem_file(name: str) -> str:

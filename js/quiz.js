@@ -1,5 +1,5 @@
 /**
- * Fazaia Inter College — Interactive MCQ Quiz Engine
+ * Fazaia Inter College - Interactive MCQ Quiz Engine
  * Instant feedback, confetti on correct answers, results dashboard.
  */
 
@@ -9,15 +9,15 @@
   const OPTION_LABELS = ["A", "B", "C", "D", "E", "F"];
 
   const MOTIVATION = [
-    "Keep going — every attempt builds mastery!",
+    "Keep going - every attempt builds mastery!",
     "Close one! Review the tip and try the next.",
-    "Mistakes are part of learning. You’ve got this!",
-    "Stay focused — the next question is a fresh start.",
+    "Mistakes are part of learning. You've got this!",
+    "Stay focused - the next question is a fresh start.",
     "Aspiring for Excellence starts with persistence!",
   ];
 
   const BADGES = [
-    { min: 90, label: "Excellence Star", tone: "gold", message: "Outstanding performance — true Fazaia spirit!" },
+    { min: 90, label: "Excellence Star", tone: "gold", message: "Outstanding performance - true Fazaia spirit!" },
     { min: 75, label: "High Flyer", tone: "sky", message: "Strong command of the material. Keep soaring!" },
     { min: 50, label: "Rising Cadet", tone: "navy", message: "Solid progress. A little more practice will lift you higher." },
     { min: 0, label: "Keep Training", tone: "slate", message: "Every expert was once a beginner. Review and retry!" },
@@ -46,7 +46,7 @@
         [questions[i], questions[j]] = [questions[j], questions[i]];
       }
       questions = questions.slice(0, limit);
-      filterLabel += ` · ${limit} random`;
+      filterLabel += ` (${limit} random)`;
     }
 
     return {
@@ -237,7 +237,7 @@
     if (isCorrect) {
       el.innerHTML = `
         <div class="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-800">
-          <p class="font-semibold">Correct — well done!</p>
+          <p class="font-semibold">Correct - well done!</p>
           ${q.explanation ? `<p class="mt-1 text-sm text-emerald-700">${escapeHtml(q.explanation)}</p>` : ""}
         </div>
       `;
@@ -246,7 +246,7 @@
       const label = OPTION_LABELS[q.correctIndex] || String(q.correctIndex + 1);
       el.innerHTML = `
         <div class="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-900">
-          <p class="font-semibold">Not quite — the correct answer is ${label}: ${escapeHtml(correctText)}</p>
+          <p class="font-semibold">Not quite - the correct answer is ${label}: ${escapeHtml(correctText)}</p>
           <p class="mt-1 text-sm text-red-800">${escapeHtml(pickMotivation())}</p>
           ${q.explanation ? `<p class="mt-2 text-sm text-red-700/90">${escapeHtml(q.explanation)}</p>` : ""}
         </div>
@@ -303,7 +303,7 @@
         selected,
         correctIndex: q.correctIndex,
         isCorrect: ok,
-        selectedText: selected != null ? q.options[selected] : "—",
+        selectedText: selected != null ? q.options[selected] : "-",
         correctText: q.options[q.correctIndex],
       };
     });
@@ -333,7 +333,7 @@
           <div class="bg-campus-mesh px-6 py-8 text-center text-white sm:px-10">
             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky">Quiz Complete</p>
             <h2 class="font-display mt-2 text-3xl sm:text-4xl">Your Results</h2>
-            <p class="mt-2 text-white/75">Fazaia Inter College — Practice Assessment</p>
+            <p class="mt-2 text-white/75">Fazaia Inter College - Practice Assessment</p>
           </div>
 
           <div class="grid gap-4 border-b border-slate-100 px-6 py-8 sm:grid-cols-3 sm:px-10">
@@ -490,7 +490,7 @@
     const meta = window.QUIZ_META || {};
     if (title) title.textContent = meta.title || "XI Mathematics Quiz";
     if (desc) {
-      const extra = state.filterLabel ? ` · ${state.filterLabel}` : "";
+      const extra = state.filterLabel ? ` | ${state.filterLabel}` : "";
       desc.textContent = (meta.description || "") + extra;
     }
     const countEl = $("bank-count");

@@ -1,5 +1,5 @@
 /**
- * Fazaia Inter College — App shell
+ * Fazaia Inter College - App shell
  * View routing, mobile nav, hero slider, sticky header behaviour.
  */
 
