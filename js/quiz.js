@@ -23,17 +23,18 @@
     { min: 0, label: "Keep Training", tone: "slate", message: "Every expert was once a beginner. Review and retry!" },
   ];
 
-  /** @type {{ questions: object[], current: number, answers: (number|null)[], locked: boolean[], filterLabel: string, studentName: string, section: string }} */
-  let state = createInitialState("all", 0, "", "");
+  /** @type {{ questions: object[], current: number, answers: (number|null)[], locked: boolean[], filterLabel: string, studentName: string, studentId: string, section: string }} */
+  let state = createInitialState("all", 0, "", "", "");
 
   function allQuestions() {
     return Array.isArray(window.QUIZ_QUESTIONS) ? window.QUIZ_QUESTIONS : [];
   }
 
-  function createInitialState(exerciseFilter, limit, studentName, section) {
+  function createInitialState(exerciseFilter, limit, studentName, studentId, section) {
     let questions = allQuestions().map((q) => ({ ...q }));
     let filterLabel = "All XI Mathematics exercises";
     const name = String(studentName ?? "").trim();
+    const sid = String(studentId ?? "").trim();
     const sec = String(section ?? "").trim();
 
     if (exerciseFilter && exerciseFilter !== "all") {
@@ -58,6 +59,7 @@
       locked: questions.map(() => false),
       filterLabel,
       studentName: name,
+      studentId: sid,
       section: sec,
     };
   }
@@ -66,15 +68,22 @@
     return String($("student-name")?.value || "").trim();
   }
 
+  function readStudentId() {
+    return String($("student-id")?.value || "").trim();
+  }
+
   function readStudentSection() {
     return String($("student-section")?.value || "").trim();
   }
 
   function requireStudentProfile() {
     const name = readStudentName();
+    const studentId = readStudentId();
     const section = readStudentSection();
     const nameErr = $("student-name-error");
     const nameInput = $("student-name");
+    const idErr = $("student-id-error");
+    const idInput = $("student-id");
     const secErr = $("student-section-error");
     const secInput = $("student-section");
     let ok = true;
@@ -88,6 +97,15 @@
       nameInput?.classList.remove("border-flame");
     }
 
+    if (studentId.length < 1) {
+      idErr?.classList.remove("hidden");
+      idInput?.classList.add("border-flame");
+      ok = false;
+    } else {
+      idErr?.classList.add("hidden");
+      idInput?.classList.remove("border-flame");
+    }
+
     if (section !== "XI B" && section !== "XI E") {
       secErr?.classList.remove("hidden");
       secInput?.classList.add("border-flame");
@@ -99,11 +117,12 @@
 
     if (!ok) {
       if (name.length < 2) nameInput?.focus();
+      else if (studentId.length < 1) idInput?.focus();
       else secInput?.focus();
       return null;
     }
 
-    return { name, section };
+    return { name, studentId, section };
   }
 
   function getExercises() {
@@ -382,6 +401,7 @@
 
     return {
       studentName: state.studentName || "Student",
+      studentId: state.studentId || "-",
       section: state.section || "-",
       correct,
       incorrect,
@@ -410,7 +430,7 @@
           <div class="bg-campus-mesh px-6 py-8 text-center text-white sm:px-10">
             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky">Quiz Complete</p>
             <h2 class="font-display mt-2 text-3xl sm:text-4xl">${escapeHtml(results.studentName)}</h2>
-            <p class="mt-1 text-base text-sky">Section: ${escapeHtml(results.section)}</p>
+            <p class="mt-1 text-base text-sky">ID: ${escapeHtml(results.studentId)} &nbsp;|&nbsp; Section: ${escapeHtml(results.section)}</p>
             <p class="mt-2 text-lg text-gold-soft">Your score: ${results.correct} / ${results.total} (${results.percent}%)</p>
             <p class="mt-1 text-white/75">Fazaia Inter College - XI Mathematics</p>
           </div>
@@ -547,6 +567,7 @@
     const results = computeResults();
     window.FazaiaHistory?.addAttempt({
       studentName: results.studentName,
+      studentId: results.studentId,
       section: results.section,
       correct: results.correct,
       total: results.total,
@@ -564,8 +585,9 @@
     const exercise = sel?.value || "all";
     const limit = lim?.value === "all" ? 0 : Number(lim?.value || 0);
     const name = state.studentName || readStudentName();
+    const studentId = state.studentId || readStudentId();
     const section = state.section || readStudentSection();
-    state = createInitialState(exercise, limit, name, section);
+    state = createInitialState(exercise, limit, name, studentId, section);
     renderQuestion();
     updateMeta();
   }
@@ -584,13 +606,14 @@
 
     if (sel && exerciseFilter) sel.value = exerciseFilter;
 
-    state = createInitialState(exercise, n, profile.name, profile.section);
+    state = createInitialState(exercise, n, profile.name, profile.studentId, profile.section);
     if (!state.questions.length) {
       alert("No questions found for this selection.");
       return;
     }
     try {
       localStorage.setItem("fazaia_student_name", profile.name);
+      localStorage.setItem("fazaia_student_id", profile.studentId);
       localStorage.setItem("fazaia_student_section", profile.section);
     } catch (_) {
       /* ignore */
@@ -603,11 +626,16 @@
   function showSetup() {
     populateExerciseSelect();
     const input = $("student-name");
+    const idInput = $("student-id");
     const sec = $("student-section");
     try {
       if (input && !input.value) {
         const saved = localStorage.getItem("fazaia_student_name");
         if (saved) input.value = saved;
+      }
+      if (idInput && !idInput.value) {
+        const savedId = localStorage.getItem("fazaia_student_id");
+        if (savedId) idInput.value = savedId;
       }
       if (sec && !sec.value) {
         const savedSec = localStorage.getItem("fazaia_student_section");
@@ -632,7 +660,7 @@
     }
     if (studentLine) {
       if (state.studentName) {
-        studentLine.textContent = `Student: ${state.studentName}  |  Section: ${state.section || "-"}`;
+        studentLine.textContent = `Student: ${state.studentName}  |  ID: ${state.studentId || "-"}  |  Section: ${state.section || "-"}`;
       } else {
         studentLine.textContent = "";
       }
@@ -656,6 +684,10 @@
     $("student-name")?.addEventListener("input", () => {
       $("student-name-error")?.classList.add("hidden");
       $("student-name")?.classList.remove("border-flame");
+    });
+    $("student-id")?.addEventListener("input", () => {
+      $("student-id-error")?.classList.add("hidden");
+      $("student-id")?.classList.remove("border-flame");
     });
     $("student-section")?.addEventListener("change", () => {
       $("student-section-error")?.classList.add("hidden");

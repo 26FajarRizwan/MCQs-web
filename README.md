@@ -4,8 +4,9 @@ Interactive practice website for **Class XI Mathematics** MCQs (Federal Board st
 
 ## Features
 
-- Student enters **name** and **section** (XI B or XI E, required) before the test
-- **History** tab stores every completed attempt (name, section, marks, %, date) on this device
+- Student enters **name**, **student ID**, and **section** (XI B or XI E) — all required — before the test
+- **History** tab stores every completed attempt (name, ID, section, marks, %, date) on this device
+- **Clear history** is admin-only (password protected)
 - Instant feedback (green + confetti on correct; red + correct answer on wrong)
 - On wrong answers: **Why this happened** + **Best solution** explanation
 - Results dashboard with student name, score, percentage, breakdown, badge
