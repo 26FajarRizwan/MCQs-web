@@ -4,7 +4,8 @@ Interactive practice website for **Class XI Mathematics** MCQs (Federal Board st
 
 ## Features
 
-- Student enters **name** before the test (shown on quiz and final result card)
+- Student enters **name** and **section** (XI B or XI E, required) before the test
+- **History** tab stores every completed attempt (name, section, marks, %, date) on this device
 - Instant feedback (green + confetti on correct; red + correct answer on wrong)
 - On wrong answers: **Why this happened** + **Best solution** explanation
 - Results dashboard with student name, score, percentage, breakdown, badge
@@ -16,9 +17,9 @@ Interactive practice website for **Class XI Mathematics** MCQs (Federal Board st
 
 1. Open `index.html` in any modern browser (Chrome, Edge, Firefox).
 2. Click **Start Maths Quiz**.
-3. Enter your **name**, choose an exercise (or all) and how many questions.
+3. Enter your **name**, select **section** (XI B or XI E), choose an exercise and question count.
 4. Click **Begin Quiz**.
-5. At the end, your name and score appear on the result card.
+5. At the end, your name, section, and score appear on the result card and are saved under **History**.
 
 No install or build step is required. Tailwind CSS and canvas-confetti load from CDN.
 
@@ -30,6 +31,7 @@ fazaia/
   css/styles.css      Brand styles and animations
   js/questions.js     Maths MCQ bank (edit answers here)
   js/solutions.js     Why-wrong + best-solution helper
+  js/history.js       Student attempt history (localStorage)
   js/quiz.js          Quiz engine
   js/app.js           Navigation and page views
   assets/             Logo and images

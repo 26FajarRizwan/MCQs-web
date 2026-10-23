@@ -23,17 +23,18 @@
     { min: 0, label: "Keep Training", tone: "slate", message: "Every expert was once a beginner. Review and retry!" },
   ];
 
-  /** @type {{ questions: object[], current: number, answers: (number|null)[], locked: boolean[], filterLabel: string, studentName: string }} */
-  let state = createInitialState("all", 0, "");
+  /** @type {{ questions: object[], current: number, answers: (number|null)[], locked: boolean[], filterLabel: string, studentName: string, section: string }} */
+  let state = createInitialState("all", 0, "", "");
 
   function allQuestions() {
     return Array.isArray(window.QUIZ_QUESTIONS) ? window.QUIZ_QUESTIONS : [];
   }
 
-  function createInitialState(exerciseFilter, limit, studentName) {
+  function createInitialState(exerciseFilter, limit, studentName, section) {
     let questions = allQuestions().map((q) => ({ ...q }));
     let filterLabel = "All XI Mathematics exercises";
     const name = String(studentName ?? "").trim();
+    const sec = String(section ?? "").trim();
 
     if (exerciseFilter && exerciseFilter !== "all") {
       questions = questions.filter((q) => q.exercise === exerciseFilter);
@@ -57,6 +58,7 @@
       locked: questions.map(() => false),
       filterLabel,
       studentName: name,
+      section: sec,
     };
   }
 
@@ -64,19 +66,44 @@
     return String($("student-name")?.value || "").trim();
   }
 
-  function requireStudentName() {
+  function readStudentSection() {
+    return String($("student-section")?.value || "").trim();
+  }
+
+  function requireStudentProfile() {
     const name = readStudentName();
-    const err = $("student-name-error");
-    const input = $("student-name");
+    const section = readStudentSection();
+    const nameErr = $("student-name-error");
+    const nameInput = $("student-name");
+    const secErr = $("student-section-error");
+    const secInput = $("student-section");
+    let ok = true;
+
     if (name.length < 2) {
-      err?.classList.remove("hidden");
-      input?.classList.add("border-flame");
-      input?.focus();
+      nameErr?.classList.remove("hidden");
+      nameInput?.classList.add("border-flame");
+      ok = false;
+    } else {
+      nameErr?.classList.add("hidden");
+      nameInput?.classList.remove("border-flame");
+    }
+
+    if (section !== "XI B" && section !== "XI E") {
+      secErr?.classList.remove("hidden");
+      secInput?.classList.add("border-flame");
+      ok = false;
+    } else {
+      secErr?.classList.add("hidden");
+      secInput?.classList.remove("border-flame");
+    }
+
+    if (!ok) {
+      if (name.length < 2) nameInput?.focus();
+      else secInput?.focus();
       return null;
     }
-    err?.classList.add("hidden");
-    input?.classList.remove("border-flame");
-    return name;
+
+    return { name, section };
   }
 
   function getExercises() {
@@ -355,6 +382,7 @@
 
     return {
       studentName: state.studentName || "Student",
+      section: state.section || "-",
       correct,
       incorrect,
       total,
@@ -382,6 +410,7 @@
           <div class="bg-campus-mesh px-6 py-8 text-center text-white sm:px-10">
             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky">Quiz Complete</p>
             <h2 class="font-display mt-2 text-3xl sm:text-4xl">${escapeHtml(results.studentName)}</h2>
+            <p class="mt-1 text-base text-sky">Section: ${escapeHtml(results.section)}</p>
             <p class="mt-2 text-lg text-gold-soft">Your score: ${results.correct} / ${results.total} (${results.percent}%)</p>
             <p class="mt-1 text-white/75">Fazaia Inter College - XI Mathematics</p>
           </div>
@@ -456,9 +485,13 @@
                 .join("")}
             </ul>
 
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <p class="mt-6 text-center text-sm text-slate-500">This attempt was saved to History with name, section, and marks.</p>
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <button type="button" id="results-retry" class="inline-flex items-center justify-center rounded-md bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:bg-navy-mid">
                 Retry Quiz
+              </button>
+              <button type="button" id="results-history" class="inline-flex items-center justify-center rounded-md border-2 border-sky/40 bg-sky/5 px-6 py-3 text-sm font-semibold text-sky-deep transition hover:bg-sky/10">
+                View History
               </button>
               <button type="button" id="results-home" class="inline-flex items-center justify-center rounded-md border-2 border-navy/15 bg-white px-6 py-3 text-sm font-semibold text-navy transition hover:border-sky hover:text-sky-deep">
                 Back to Home
@@ -476,6 +509,11 @@
         return;
       }
       window.FazaiaApp?.showView("quiz");
+    });
+
+    $("results-history")?.addEventListener("click", () => {
+      window.FazaiaHistory?.renderHistory();
+      window.FazaiaApp?.showView("history");
     });
 
     $("results-home")?.addEventListener("click", () => {
@@ -506,6 +544,16 @@
 
   function finishQuiz() {
     if (!state.locked.every(Boolean)) return;
+    const results = computeResults();
+    window.FazaiaHistory?.addAttempt({
+      studentName: results.studentName,
+      section: results.section,
+      correct: results.correct,
+      total: results.total,
+      percent: results.percent,
+      filterLabel: state.filterLabel,
+      badge: results.badge.label,
+    });
     renderResults();
     window.FazaiaApp?.showView("results");
   }
@@ -516,14 +564,15 @@
     const exercise = sel?.value || "all";
     const limit = lim?.value === "all" ? 0 : Number(lim?.value || 0);
     const name = state.studentName || readStudentName();
-    state = createInitialState(exercise, limit, name);
+    const section = state.section || readStudentSection();
+    state = createInitialState(exercise, limit, name, section);
     renderQuestion();
     updateMeta();
   }
 
   function startQuiz(exerciseFilter, limit) {
-    const name = requireStudentName();
-    if (!name) {
+    const profile = requireStudentProfile();
+    if (!profile) {
       window.FazaiaApp?.showView("setup");
       return;
     }
@@ -535,13 +584,14 @@
 
     if (sel && exerciseFilter) sel.value = exerciseFilter;
 
-    state = createInitialState(exercise, n, name);
+    state = createInitialState(exercise, n, profile.name, profile.section);
     if (!state.questions.length) {
       alert("No questions found for this selection.");
       return;
     }
     try {
-      localStorage.setItem("fazaia_student_name", name);
+      localStorage.setItem("fazaia_student_name", profile.name);
+      localStorage.setItem("fazaia_student_section", profile.section);
     } catch (_) {
       /* ignore */
     }
@@ -553,13 +603,18 @@
   function showSetup() {
     populateExerciseSelect();
     const input = $("student-name");
-    if (input && !input.value) {
-      try {
+    const sec = $("student-section");
+    try {
+      if (input && !input.value) {
         const saved = localStorage.getItem("fazaia_student_name");
         if (saved) input.value = saved;
-      } catch (_) {
-        /* ignore */
       }
+      if (sec && !sec.value) {
+        const savedSec = localStorage.getItem("fazaia_student_section");
+        if (savedSec === "XI B" || savedSec === "XI E") sec.value = savedSec;
+      }
+    } catch (_) {
+      /* ignore */
     }
     updateMeta();
     window.FazaiaApp?.showView("setup");
@@ -576,7 +631,11 @@
       desc.textContent = (meta.description || "") + extra;
     }
     if (studentLine) {
-      studentLine.textContent = state.studentName ? `Student: ${state.studentName}` : "";
+      if (state.studentName) {
+        studentLine.textContent = `Student: ${state.studentName}  |  Section: ${state.section || "-"}`;
+      } else {
+        studentLine.textContent = "";
+      }
     }
     const countEl = $("bank-count");
     if (countEl) countEl.textContent = String(allQuestions().length);
@@ -597,6 +656,10 @@
     $("student-name")?.addEventListener("input", () => {
       $("student-name-error")?.classList.add("hidden");
       $("student-name")?.classList.remove("border-flame");
+    });
+    $("student-section")?.addEventListener("change", () => {
+      $("student-section-error")?.classList.add("hidden");
+      $("student-section")?.classList.remove("border-flame");
     });
 
     document.querySelectorAll("[data-start-quiz]").forEach((el) => {

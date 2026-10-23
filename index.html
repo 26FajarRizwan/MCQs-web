@@ -90,6 +90,7 @@
         <nav class="hidden items-center gap-1 lg:flex" aria-label="Primary">
           <a href="#home" data-nav="home" class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">Home</a>
           <a href="#setup" data-start-quiz class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">XI Mathematics</a>
+          <a href="#history" data-nav="history" class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">History</a>
           <a href="#about" data-nav="about" class="px-3 py-3.5 text-sm font-semibold text-white/90 transition hover:text-gold">About</a>
         </nav>
 
@@ -118,8 +119,9 @@
       </div>
       <nav class="flex flex-col gap-1 p-4 text-navy">
         <a href="#home" data-nav="home" class="rounded-md px-3 py-2.5 font-semibold hover:bg-mist">Home</a>
-        <a href="#about" data-nav="about" class="rounded-md px-3 py-2.5 font-semibold hover:bg-mist">About</a>
         <a href="#setup" data-start-quiz class="rounded-md px-3 py-2.5 font-semibold hover:bg-mist">XI Mathematics Quiz</a>
+        <a href="#history" data-nav="history" class="rounded-md px-3 py-2.5 font-semibold hover:bg-mist">History</a>
+        <a href="#about" data-nav="about" class="rounded-md px-3 py-2.5 font-semibold hover:bg-mist">About</a>
         <a href="#setup" data-start-quiz class="mt-3 rounded-md bg-gold px-3 py-3 text-center font-bold text-navy">Start Maths Quiz</a>
       </nav>
     </aside>
@@ -254,6 +256,20 @@
               <p id="student-name-error" class="mt-1 hidden text-sm text-flame">Please enter your name to start the test.</p>
             </div>
             <div>
+              <label for="student-section" class="block text-sm font-semibold text-navy">Section <span class="text-flame">*</span></label>
+              <select
+                id="student-section"
+                name="studentSection"
+                required
+                class="mt-2 w-full rounded-md border-2 border-slate-200 bg-mist px-3 py-3 text-sm text-navy focus:border-sky focus:outline-none"
+              >
+                <option value="" selected disabled>Select your section</option>
+                <option value="XI B">XI B</option>
+                <option value="XI E">XI E</option>
+              </select>
+              <p id="student-section-error" class="mt-1 hidden text-sm text-flame">Please select your section (XI B or XI E).</p>
+            </div>
+            <div>
               <label for="quiz-exercise-select" class="block text-sm font-semibold text-navy">Exercise / chapter</label>
               <select
                 id="quiz-exercise-select"
@@ -350,6 +366,16 @@
         </div>
       </section>
 
+      <!-- ========== HISTORY VIEW ========== -->
+      <section data-view="history" class="view-panel bg-soft-pattern min-h-[70vh]" aria-label="Test History" aria-hidden="true">
+        <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-deep">Records</p>
+          <h1 class="font-display mt-2 text-3xl text-navy">Student Test History</h1>
+          <p class="mt-2 text-slate-600">Every completed attempt is saved on this device with name, section (XI B / XI E), and marks.</p>
+          <div id="history-root" class="mt-8"></div>
+        </div>
+      </section>
+
       <!-- ========== ABOUT VIEW ========== -->
       <section data-view="about" class="view-panel bg-white min-h-[70vh]" aria-label="About" aria-hidden="true">
         <div class="bg-campus-mesh">
@@ -398,9 +424,10 @@
       </div>
     </footer>
 
-    <!-- Scripts: questions, solutions, quiz, app -->
+    <!-- Scripts: questions, solutions, history, quiz, app -->
     <script src="js/questions.js"></script>
     <script src="js/solutions.js"></script>
+    <script src="js/history.js"></script>
     <script src="js/quiz.js"></script>
     <script src="js/app.js"></script>
   </body>

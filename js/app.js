@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  const VIEWS = ["home", "setup", "quiz", "results", "about"];
+  const VIEWS = ["home", "setup", "quiz", "results", "history", "about"];
 
   function $(id) {
     return document.getElementById(id);
@@ -27,6 +27,10 @@
       if (active) link.setAttribute("aria-current", "page");
       else link.removeAttribute("aria-current");
     });
+
+    if (target === "history") {
+      window.FazaiaHistory?.renderHistory();
+    }
 
     closeMobileMenu();
     window.scrollTo({ top: 0, behavior: "smooth" });
